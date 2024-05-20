@@ -1,9 +1,9 @@
 export function Footer() {
 	return (
 		<footer>
-			<h2>
-				Footer
-			</h2>
+			<h4>
+				© 2024 Copyright, All Right Reserved, Made by Darius & Maisteronix ♥️
+			</h4>
 		</footer>
 	)
 }
