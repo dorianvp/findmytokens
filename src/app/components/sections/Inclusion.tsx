@@ -15,21 +15,21 @@ export function Inclusion() {
 			<li className="my-16">
 				<Item
 					title="List of all Centralized Exchanges Interacted"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
 					image={placeholder}
 				/>
 			</li>
 			<li className="my-16">
 				<Item
 					title="Time and Date of the Interaction"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
 					image={placeholder}
 				/>
 			</li>
 			<li className="my-16">
 				<Item
 					title="Chain and Wallet address of the interaction"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
 					image={placeholder}
 				/>
 			</li>
