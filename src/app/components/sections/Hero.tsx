@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import heroBg from '../../../../public/hero-bg.svg'
 import heroWave from '../../../../public/hero-wave.svg'
+import { HeroForm } from "../hero-form";
 
 export function Hero() {
 	return (
@@ -36,18 +37,7 @@ export function Hero() {
 					<h3 className="my-5 text-white">FindMyCoins analyses your wallet transactions and matches it to the vaults of centralized exchanges,
 						it generates a list of names that you have used in the past, to log in and check for unclaimed balance.
 					</h3>
-					<div className="flex flex-col p-5 mt-2 w-full bg-white rounded-xl md:mt-10 lg:mt-20 lg:flex-row">
-						<input
-							type="text"
-							placeholder="Address"
-							className="flex-grow px-2 py-4 w-full bg-white rounded-2xl border border-gray-300 border-solid lg:mx-2 lg:w-max"
-						/>
-						<button
-							className="px-5 py-4 mt-5 w-full text-white bg-red-500 rounded-full lg:mt-0 lg:w-fit"
-						>
-							Generate Report
-						</button>
-					</div>
+					<HeroForm />
 				</div>
 				<span className="w-0 lg:w-1/2" />
 			</div>
