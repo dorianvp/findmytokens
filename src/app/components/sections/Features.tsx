@@ -42,13 +42,16 @@ export function Features() {
 
 		// Clear the canvas
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		canvas.width = canvasRef.current?.getBoundingClientRect().width as number;
+		canvas.height = canvasRef.current?.getBoundingClientRect().height as number;
 		draw(ctx)
 	};
 
 	useEffect(() => {
 		const canvas = canvasRef.current as HTMLCanvasElement;
-		const context = canvas.getContext('2d')
-		console.log(canvas.width);
+		const context = canvas.getContext('2d');
+		canvas.width = canvasRef.current?.getBoundingClientRect().width as number;
+		canvas.height = canvasRef.current?.getBoundingClientRect().height as number;
 
 		if (context) {
 			draw(context)

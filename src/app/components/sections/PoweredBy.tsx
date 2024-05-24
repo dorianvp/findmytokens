@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import EtherscanLogo from '../../../../public/etherscan-logo.png'
-import BscScanLogo from '../../../../public/bsc-logo.png'
+import BscScanLogo from '../../../../public/bsc-logo.svg'
 import PolygonLogo from '../../../../public/polygon-logo.png'
 
 export function PoweredBy() {
@@ -13,15 +13,19 @@ export function PoweredBy() {
 		>
 			<Image
 				src={EtherscanLogo}
-				alt='ehterscan logo'
+				alt='etherscan logo'
+				className='py-5 h-20 w-auto'
+				style={{ objectFit: 'cover' }}
 			/>
 			<Image
 				src={BscScanLogo}
-				alt='ehterscan logo'
+				alt='bsc logo'
+				className='py-5 w-20'
 			/>
 			<Image
 				src={PolygonLogo}
-				alt='ehterscan logo'
+				alt='polygon logo'
+				className='py-5 w-20'
 			/>
 		</div>
 	</section>

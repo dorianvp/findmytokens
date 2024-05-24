@@ -1,48 +1,29 @@
-import { analyzeNormalTransActions } from "@/utils/analysis";
-import { extractCSV } from "@/utils/csv";
-import { requestAction } from "@/utils/etherscan";
+'use client'
 
-// @ts-ignore
-import data from '../db-data/csx-address-data.csv'
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 export function HeroForm() {
-
-	async function parseAddress(formData: FormData) {
-		'use server'
-
-		let requestData = await requestAction('get_account_transactions', formData.get('address'));
-
-		// let data = await extractCSV(csvFile)
-
-		let pre: any[] = [];
-
-		data.forEach((i: any) => {
-			pre.push({ exchangeAddress: i.exchangeAddress, exchangeName: i.exchangeName })
-		});
-
-		let db = {}
-
-		pre.forEach((obj: any) => {
-			// @ts-ignore
-			db[obj[Object.keys(obj)[0]]] = obj[Object.keys(obj)[1]]
-		});
-
-		const result = analyzeNormalTransActions(requestData.result, db)
-		redirect(`${formData.get('address')}`);
-		return result
-	}
-
+	const router = useRouter();
+	const [address, setAddress] = useState<string>('')
 	return (
 		<form
 			className="flex flex-col p-5 mt-2 w-full bg-white rounded-xl md:mt-10 lg:mt-20 lg:flex-row"
-			action={parseAddress}
+			onSubmit={(e: FormEvent) => {
+				e.preventDefault();
+				if (address) {
+					router.push(`/${address}`)
+				}
+			}}
 		>
 			<input
 				type="text"
 				placeholder="Address"
 				name="address"
-				className="flex-grow px-2 py-4 w-full bg-white rounded-2xl border border-gray-300 border-solid lg:mx-2 lg:w-max"
+				onChange={(e: ChangeEvent<HTMLInputElement>) => {
+					setAddress(e.target.value)
+				}}
+				className="flex-grow px-2 py-4 w-full bg-white rounded-2xl border border-gray lg:mx-2 lg:w-max"
 			/>
 			<button
 				type="submit"
