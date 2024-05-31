@@ -20,7 +20,7 @@ export function Hero() {
 				alt="background"
 				quality={100}
 				sizes="100vw"
-				className="object-fill absolute right-0 bottom-0 w-full -z-10"
+				className="object-fill absolute -left-0 -bottom-1 w-full -z-10"
 			/>
 			<nav className="w-full">
 				<h3 className="text-white w-fit">

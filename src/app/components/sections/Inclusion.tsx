@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import placeholder from '../../../../public/placeholder.png'
 
 export function Inclusion() {
-	return <section className="flex flex-col items-center">
+	return <section className="flex flex-col items-center p-20">
 		<h1 className="my-10">
 			<b>
 				What is included on the report
@@ -15,21 +15,21 @@ export function Inclusion() {
 			<li className="my-16">
 				<Item
 					title="List of all Centralized Exchanges Interacted"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="A complete list that includes the names of the centralized exchanges the wallet has interacted with in its lifetime either for sending money to the cold wallet address or receiving from the exchange."
 					image={placeholder}
 				/>
 			</li>
 			<li className="my-16">
 				<Item
 					title="Time and Date of the Interaction"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="Every report includes a precise snapshot of the time and date of each interaction in that wallet. Get precise information for reporting or accounting needs."
 					image={placeholder}
 				/>
 			</li>
 			<li className="my-16">
 				<Item
 					title="Chain and Wallet address of the interaction"
-					text="SAMPLESAMPLESAMPLESAMPLESAMPLESAMPLESAMPLE"
+					text="Get information about the chain used for the interaction and the wallet address of the exchange that either sent or received tokens to/from your wallet."
 					image={placeholder}
 				/>
 			</li>
@@ -48,7 +48,9 @@ function Item({ image, title, text }: ItemProps) {
 		<div className="flex">
 			<div className="flex flex-col w-1/2">
 				<h3>
-					{title}
+					<b>
+						{title}
+					</b>
 				</h3>
 				<p>{text}</p>
 			</div>

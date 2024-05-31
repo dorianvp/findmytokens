@@ -4,6 +4,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export async function POST(req: NextRequest) {
 	try {
+		const { address: address } = await req.json();
+
 		// Create Checkout Sessions from body params.
 		const session = await stripe.checkout.sessions.create({
 			ui_mode: 'embedded',
@@ -15,6 +17,9 @@ export async function POST(req: NextRequest) {
 					quantity: 1,
 				},
 			],
+			metadata: {
+				wallet: address
+			},
 			mode: 'payment',
 			return_url:
 				`${req.nextUrl.origin}/return?session_id={CHECKOUT_SESSION_ID}`,
@@ -25,8 +30,6 @@ export async function POST(req: NextRequest) {
 		console.log(err);
 		return Response.error()
 	}
-
-
 }
 
 

@@ -6,14 +6,21 @@ import {
 	EmbeddedCheckout
 } from '@stripe/react-stripe-js';
 import { useCallback } from 'react';
+import { useParams } from 'next/navigation';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 export default function Checkout() {
+	const params = useParams();
 	const fetchClientSecret = useCallback(() => {
 		// Create a Checkout Session
+		const { address } = params;
+
 		return fetch("/api/checkout", {
 			method: "POST",
+			body: JSON.stringify({
+				address: address
+			})
 		})
 			.then((res) => res.json())
 			.then((data) => data.clientSecret);

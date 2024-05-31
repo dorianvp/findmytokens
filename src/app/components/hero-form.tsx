@@ -12,7 +12,8 @@ export function HeroForm() {
 			onSubmit={(e: FormEvent) => {
 				e.preventDefault();
 				if (address) {
-					router.push(`/${address}`)
+					if (address == '0xa322BAfebb305bf55EAD5E03Fd6372c2574df6a3') // delete later
+						router.push(`/${address}`)
 				}
 			}}
 		>
