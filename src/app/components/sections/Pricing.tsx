@@ -13,7 +13,6 @@ export function Pricing() {
 					Pricing
 				</b>
 			</h2>
-			<h4>Straightforward pricing based on the amount of wallets you need analyzed</h4>
 			<section className="flex justify-between items-center my-10 w-8/12">
 				<PriceCard title="$29.99" desc="1 Wallet Report" className="w-full" />
 				{/* <PriceCard title="$99.99" desc="4 Wallet Report" className="mr-5" />
