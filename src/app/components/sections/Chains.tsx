@@ -28,7 +28,7 @@ export function Chains() {
 									alt="tick"
 									className="mr-2"
 								/>
-								Polygon
+								inance Smart Chain
 							</h4>
 						</li>
 						<li>
@@ -38,7 +38,7 @@ export function Chains() {
 									alt="tick"
 									className="mr-2"
 								/>
-								Binance Smart Chain
+								Arbitrum
 							</h4>
 						</li>
 						<li>
