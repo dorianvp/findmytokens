@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import heroBg from '../../../public/bg.svg';
+import heroBg from '../../../public/bg.png';
 import { useCallback, useEffect, useState } from "react";
 import { getSummary } from "@/actions";
 import { WalletSummary } from "@/utils/analysis";
@@ -21,15 +21,15 @@ export default function Address({ params }: { params: { address: string } }) {
 	}, []);
 
 	return (
-		<main className="flex h-screen w-screen flex-col items-center justify-center">
+		<main className="flex h-screen flex-col items-center justify-center">
 			<Image
 				src={heroBg}
 				alt="background"
+				priority
 				quality={100}
 				fill
-				sizes="100vw"
+				sizes="100vh"
 				className="object-cover fixed -z-10"
-				priority
 			/>
 			{!params.address ?
 				<>
