@@ -6,7 +6,7 @@ import { HeroForm } from "../hero-form";
 
 export function Hero() {
 	return (
-		<section className="flex flex-col p-5 w-screen h-screen">
+		<section className="flex flex-col p-5 h-screen">
 			<Image
 				src={heroBg}
 				alt="background"

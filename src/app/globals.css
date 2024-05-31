@@ -69,6 +69,8 @@
   @layer base {
     * {
       @apply border-border;
+      @apply m-0;
+      @apply p-0;
     }
     body {
       @apply bg-background text-foreground;
@@ -94,4 +96,8 @@
   
   h4 {
     @apply text-xl;
+  }
+
+  body {
+    min-height: 100vh;
   }

@@ -8,7 +8,7 @@ import { scrollToTop } from "@/utils/browser";
 
 export function Chains() {
 	return (
-		<section className="flex flex-col justify-center items-center w-screen py-20">
+		<section className="flex flex-col justify-center items-center py-20">
 			<div className="flex justify-between w-full py-20">
 				<div className="flex flex-col px-32">
 					<h2 className="text-center my-5">Works with all major EVM Chains</h2>

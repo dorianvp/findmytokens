@@ -31,8 +31,6 @@ export async function POST(req: Request) {
 			html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
 		});
 		console.log('MAIL:', r);
-
-
 	}
 
 	return Response.json({ received: true });

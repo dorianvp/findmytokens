@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator"
 
 export function FAQ() {
 	return (
-		<section className="p-20 w-screen">
+		<section className="p-20">
 			<section className="flex mb-10">
 				<h1 className="text-dark-gray">
 					<b>
