@@ -5,12 +5,6 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_KEY as string);
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
-export const config = {
-	api: {
-		bodyParser: false,
-	},
-};
-
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET as string;
 
 export async function POST(req: Request) {
