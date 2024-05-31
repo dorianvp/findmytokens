@@ -8,7 +8,7 @@ export function HeroForm() {
 	const [address, setAddress] = useState<string>('')
 	return (
 		<form
-			className="flex flex-col p-5 mt-2 w-full bg-white rounded-xl md:mt-10 lg:mt-20 lg:flex-row"
+			className="flex flex-col p-5 mt-2 w-full bg-white rounded-xl md:mt-6 lg:mt-10 lg:flex-row"
 			onSubmit={(e: FormEvent) => {
 				e.preventDefault();
 				if (address) {
