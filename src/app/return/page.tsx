@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroBg from '../../../public/bg.svg';
+import heroBg from '../../../public/bg.png';
 import Stripe from "stripe";
 import { MyDocument } from "../components/FullReport";
 import { PdfRendered } from "../components/PdfRenderer";
