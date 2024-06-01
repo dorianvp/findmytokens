@@ -70,7 +70,7 @@ export function FAQ() {
 					</AccordionTrigger>
 					<AccordionContent>
 						<h4>
-							FindMyTokens currently generates reports for the Ethereum, Polygon, and Binance Smart Chain blockchains. More blockchains are coming soon. The price you pay includes all these three blockchains.
+							FindMyTokens currently generates reports for the Ethereum, Arbitrum, and Binance Smart Chain blockchains. More blockchains are coming soon. The price you pay includes all these three blockchains.
 						</h4>
 					</AccordionContent>
 				</AccordionItem>

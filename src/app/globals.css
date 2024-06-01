@@ -84,7 +84,8 @@
   }
   
   h1 {
-    @apply text-6xl;
+    @apply md:text-6xl;
+    @apply text-4xl
   }
   
   h2 {
@@ -100,4 +101,8 @@
 
   body {
     min-height: 100vh;
+  }
+
+  img {
+    @apply select-none;
   }
