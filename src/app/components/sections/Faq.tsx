@@ -27,7 +27,9 @@ export function FAQ() {
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						FindMyTokens is a web app that allows you to search for wallet transactions by entering your EVM public wallet address. We scan those wallet transactions and use advanced algorithms to match them with the public wallet addresses of registered cryptocurrency exchanges. Then, we generate a PDF report detailing the exchange, chain, and time the match was registered.
+						<h4>
+							FindMyTokens is a web app that allows you to search for wallet transactions by entering your EVM public wallet address. We scan those wallet transactions and use advanced algorithms to match them with the public wallet addresses of registered cryptocurrency exchanges. Then, we generate a PDF report detailing the exchange, chain, and time the match was registered.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-2">
@@ -41,13 +43,19 @@ export function FAQ() {
 					<AccordionContent>
 						<ul className="list-disc">
 							<li>
-								Hackers identification: Identify the exchanges used by hackers and report them, by scanning the wallet that stole your funds.
+								<h4>
+									<b>Hackers identification:</b> Identify the exchanges used by hackers and report them, by scanning the wallet that stole your funds.
+								</h4>
 							</li>
 							<li>
-								Forgotten accounts: Remember exchanges you have interacted with and where you likely have an account opened where tokens might still be in balance.
+								<h4>
+									<b>Forgotten accounts:</b> Remember exchanges you have interacted with and where you likely have an account opened where tokens might still be in balance.
+								</h4>
 							</li>
 							<li>
-								Recordkeeping: Keep track of dates and blockchains when sending tokens to centralized exchanges.
+								<h4>
+									<b>Recordkeeping:</b> Keep track of dates and blockchains when sending tokens to centralized exchanges.
+								</h4>
 							</li>
 						</ul>
 					</AccordionContent>
@@ -61,7 +69,9 @@ export function FAQ() {
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						FindMyTokens currently generates reports for the Ethereum, Polygon, and Binance Smart Chain blockchains. More blockchains are coming soon. The price you pay includes all these three blockchains.
+						<h4>
+							FindMyTokens currently generates reports for the Ethereum, Polygon, and Binance Smart Chain blockchains. More blockchains are coming soon. The price you pay includes all these three blockchains.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-4">
@@ -73,7 +83,9 @@ export function FAQ() {
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						No, we will do an initial scan for free and inform you if we have found something of interest for paying the full report first.
+						<h4>
+							No, we will do an initial scan for free and inform you if we have found something of interest for paying the full report first.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-5">
@@ -85,7 +97,9 @@ export function FAQ() {
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						Our databases of known exchange wallet addresses are regularly updated to ensure accurate and up-to-date matching. We closely monitor new exchanges and updates from existing ones.
+						<h4>
+							Our databases of known exchange wallet addresses are regularly updated to ensure accurate and up-to-date matching. We closely monitor new exchanges and updates from existing ones.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-6">
@@ -97,7 +111,9 @@ export function FAQ() {
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes, we can most definitely do that. If you require more professional analysis, please contact us at support@findmytokens.com. We have helped law enforcement, hacked DAOs, drained individuals, exchanges, and more.
+						<h4>
+							Yes, we can most definitely do that. If you require more professional analysis, please contact us at <b>support@findmytokens.com</b>. We have helped law enforcement, hacked DAOs, drained individuals, exchanges, and more.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>

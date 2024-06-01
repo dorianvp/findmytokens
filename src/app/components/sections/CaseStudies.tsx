@@ -46,17 +46,17 @@ type UseCaseProps = {
 function UseCase(props: UseCaseProps) {
 	return (
 		<article className={`flex flex-col p-10 border-2 rounded-3xl border-gray basis-0 grow self-stretch justify-start ${props.className}`}>
-			<header className="flex justify-start items-center mb-5">
+			<header className="flex justify-center items-center mb-5">
 				<div className='flex flex-col'>
-					<h4>
+					<h4 className='text-center'>
 						<b>
 							{props.name}
 						</b>
 					</h4>
-					<h4 className='text-dark-gray'>{props.role}</h4>
+					<h4 className='text-dark-gray text-center'>{props.role}</h4>
 				</div>
 			</header>
-			<p>{props.text}</p>
+			<p className='text-center'>{props.text}</p>
 		</article>
 	)
 }
