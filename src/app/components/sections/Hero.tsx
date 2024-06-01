@@ -33,9 +33,8 @@ export function Hero() {
 			</nav>
 			<div className="flex items-center p-12 h-screen">
 				<div className="w-full lg:w-1/2">
-					<h1 className="my-5 text-white"><b>Find Unclaimed Tokens On Forgotten Exchange Accounts</b></h1>
-					<h3 className="my-5 text-white">FindMyCoins analyses your wallet transactions and matches it to the vaults of centralized exchanges,
-						it generates a list of names that you have used in the past, to log in and check for unclaimed balance.
+					<h1 className="my-5 text-white"><b>Find Out Which Exchanges Sent Or Received Tokens From Your Wallet</b></h1>
+					<h3 className="my-5 text-white">FindMyCoins analyses wallet transactions and matches them to the addresses of centralized exchanges, helping to recover drained accounts, check for unclaimed balances, and better recordkeeping.
 					</h3>
 					<HeroForm />
 				</div>

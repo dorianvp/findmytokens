@@ -28,7 +28,7 @@ export function Chains() {
 									alt="tick"
 									className="mr-2"
 								/>
-								inance Smart Chain
+								Binance Smart Chain
 							</h4>
 						</li>
 						<li>
