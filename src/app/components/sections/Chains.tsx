@@ -10,8 +10,12 @@ export function Chains() {
 	return (
 		<section className="flex flex-col justify-center items-center py-20 w-full bg-gray">
 			<div className="flex justify-center items-center py-20 w-full">
-				<div className="flex flex-col px-32">
-					<h2 className="my-5 text-center">Works with all major EVM Chains</h2>
+				<div className="flex flex-col px-5 md:px-32">
+					<h2 className="my-5 text-center text-2xl md:text-5xl">
+						<b>
+							Works with all major EVM Chains
+						</b>
+					</h2>
 					<ul className="flex flex-col justify-evenly items-center h-full xl:items-start">
 						<li className="w-1/2">
 							<h4 className="inline-flex">

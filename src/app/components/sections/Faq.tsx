@@ -10,7 +10,7 @@ export function FAQ() {
 	return (
 		<section className="p-20 w-full">
 			<section className="flex mb-10">
-				<h1 className="text-dark-gray">
+				<h1 className="text-dark-gray text-center">
 					<b>
 						Frequently Asked Questions
 					</b>
@@ -20,7 +20,7 @@ export function FAQ() {
 			<Accordion type="single" collapsible>
 				<AccordionItem value="item-1">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								What is FindMyTokens?
 							</b>
@@ -34,7 +34,7 @@ export function FAQ() {
 				</AccordionItem>
 				<AccordionItem value="item-2">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								What is FindMyTokens useful for?
 							</b>
@@ -62,7 +62,7 @@ export function FAQ() {
 				</AccordionItem>
 				<AccordionItem value="item-3">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								Which blockchains does FindMyTokens work on?
 							</b>
@@ -76,7 +76,7 @@ export function FAQ() {
 				</AccordionItem>
 				<AccordionItem value="item-4">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								Do I need to pay before the report is generated?
 							</b>
@@ -90,7 +90,7 @@ export function FAQ() {
 				</AccordionItem>
 				<AccordionItem value="item-5">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								How often are the exchange wallet address databases updated?
 							</b>
@@ -104,7 +104,7 @@ export function FAQ() {
 				</AccordionItem>
 				<AccordionItem value="item-6">
 					<AccordionTrigger>
-						<h3>
+						<h3 className="text-left">
 							<b>
 								Can you help with deeper analysis or assistance to institutions?
 							</b>
