@@ -25,12 +25,14 @@ export async function POST(req: Request) {
 	if (event.type === 'checkout.session.completed') {
 		const session = event.data.object;
 		let data = await parseAddress(session.metadata?.wallet as string);
-		data.email = session.customer_email as string;
+		data.email = session.customer_details?.email as string;
+
+		console.log(`${session.customer_details?.email}`);
 
 		const component = MyDocument({ reportData: data })
 		const r = await resend.emails.send({
 			from: 'support@findmytokens.com',
-			to: `${session.customer_email}`,
+			to: `${session.customer_details?.email}`,
 			subject: `Here is your report for wallet ${session.metadata?.wallet}`,
 			react: EmailReportTemplate({ wallet: session.metadata?.wallet as string }),
 			attachments: [{

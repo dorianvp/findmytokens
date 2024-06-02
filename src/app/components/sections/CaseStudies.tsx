@@ -14,18 +14,18 @@ export function CaseStudies() {
 				Explore the use cases and gains users have taken
 				using FindMyTokens
 			</h3>
-			<section className='flex flex-col justify-center items-center xl:flex-row'>
+			<section className='flex flex-col justify-center items-center md:flex-row'>
 				<UseCase
 					name='Brad'
 					role='Found Tokens On A Forgotten Exchange Account'
 					text="I have been in crypto for a long time, and remember opening accounts on many different exchanges. However, I have forgotten which ones exactly, and by using FindMyTokens I was able to get the names of exchanges I have interacted with my main wallet, and access them to find unclaimed balances."
-					className='mb-10 xl:mr-10'
+					className='mb-10 md:mr-10'
 				/>
 				<UseCase
 					name='Matt'
 					role='Recovered Hacked Wallet Assets'
 					text="I was able to scan the wallet that stole my assets and after finding out that it recently made a transaction to a centralized exchange I was able to report it, and after submitting proof I ended up recovering my tokens. I couldn't be more thankful!"
-					className='mb-10 xl:mr-10'
+					className='mb-10 md:mr-10'
 				/>
 				<UseCase
 					name='Sofia'

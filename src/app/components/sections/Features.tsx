@@ -63,9 +63,9 @@ export function Features() {
 	return (
 		<section className="flex flex-col items-center py-10 px-40">
 			<h1 className="py-10"><b>How does FindMyTokens work?</b></h1>
-			<div className="flex justify-between items-start my-32 relative">
+			<div className="flex flex-col md:flex-row justify-between items-start my-32 relative">
 				<canvas
-					className="absolute w-full h-full -z-10"
+					className="absolute w-full h-full -z-10 md:block hidden"
 					ref={canvasRef}
 				/>
 				<div className="flex flex-col items-center justify-start w-3/12">

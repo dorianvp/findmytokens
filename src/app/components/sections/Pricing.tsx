@@ -13,12 +13,12 @@ export function Pricing() {
 					Pricing
 				</b>
 			</h2>
-			<section className="flex justify-between items-center my-10 w-8/12">
+			<section className="flex justify-between items-center my-10 w-10/12 md:w-8/12">
 				<PriceCard title="$29.99" desc="1 Wallet Report" className="w-full" />
 				{/* <PriceCard title="$99.99" desc="4 Wallet Report" className="mr-5" />
 				<PriceCard title="$150.00" desc="7 Wallet Report" /> */}
 			</section>
-			<div className="flex flex-col px-10 py-5 bg-white items-center justify-center rounded-xl mx-5 w-8/12">
+			<div className="flex flex-col px-10 py-5 bg-white items-center justify-center rounded-xl mx-5 w-10/12 md:w-8/12">
 				<p className="text-purple">INSTITUTIONAL</p>
 				<h3 className="py-5">
 					<b>
