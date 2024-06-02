@@ -24,7 +24,7 @@ export default async function Home({ searchParams }: {
 		// Fetch transactions
 		const data = await parseAddress(session.metadata.wallet)
 
-		data.email = session.customer_email as string;
+		data.email = session.customer_details?.email as string;
 
 		const component = <MyDocument reportData={data} />;
 		return (

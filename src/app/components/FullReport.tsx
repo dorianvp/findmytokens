@@ -65,7 +65,7 @@ type DocumentProps = {
 // Create Document Component
 export function MyDocument({ reportData }: DocumentProps) {
 	const theDate = new Date(Date.now() * 1000);
-	const dateString = theDate.toISOString();
+	const dateString = theDate.toUTCString();
 	return (
 		<Document title={reportData.wallet}>
 			<Page
