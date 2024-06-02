@@ -75,12 +75,12 @@ export function Features() {
 					>
 						1
 					</h1>
-					<h3 className="my-5 text-center"><b>Check For Matches</b></h3>
+					<h3 className="my-5 text-center"><b>Choose A Wallet</b></h3>
 					<h4 className="text-center">You enter your EVM wallet address and pay for the report.</h4>
 				</div>
 				<div className="flex flex-col items-center justify-start w-10/12 lg:w-3/12 mb-10">
 					<h1 className="bg-green-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center">2</h1>
-					<h3 className="my-5 text-center"><b>Download The Report</b></h3>
+					<h3 className="my-5 text-center"><b>Check For Matches</b></h3>
 					<h4 className="text-center">
 						We explore the Blockchain and analyze your past transactions, checking for interactions with centralized exchanges.
 					</h4>
@@ -92,7 +92,7 @@ export function Features() {
 					>
 						3
 					</h1>
-					<h3 className="my-5 text-center"><b>Choose A Wallet</b></h3>
+					<h3 className="my-5 text-center"><b>Download The Report</b></h3>
 					<h4 className="text-center">We generate a report with the date, chain and name of the exchange where your wallet interacted with, you can manually enter those exchanges to check for unclaimed balances or close for peace of mind.</h4>
 				</div>
 			</div>
