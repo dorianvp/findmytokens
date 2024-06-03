@@ -19,7 +19,7 @@ export default async function Home({ searchParams }: {
 	const session_id = searchParams.session_id;
 	if (!session_id) throw new Error("Missing session id");
 	const session = await stripe.checkout.sessions.retrieve(session_id);
-	if (session.payment_status == 'paid' && session.metadata) {
+	if (session && session.payment_status == 'paid' && session.metadata) {
 		const hash = createHash('sha512');
 
 		// Fetch transactions
