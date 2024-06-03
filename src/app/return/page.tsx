@@ -16,40 +16,63 @@ export default async function Home({ searchParams }: {
 	};
 }) {
 
-	const session_id = searchParams.session_id;
-	if (!session_id) throw new Error("Missing session id");
-	const session = await stripe.checkout.sessions.retrieve(session_id);
-	if (session && session.payment_status == 'paid' && session.metadata) {
-		const hash = createHash('sha512');
+	try {
 
-		// Fetch transactions
-		const data = await parseAddress(session.metadata.wallet)
 
-		data.email = session.customer_details?.email as string;
+		const session_id = searchParams.session_id;
+		if (!session_id) throw new Error("Missing session id");
+		const session = await stripe.checkout.sessions.retrieve(session_id);
+		if (session && session.payment_status == 'paid' && session.metadata) {
+			const hash = createHash('sha512');
 
-		data.id = hash.update(`${data.email}${data.wallet}`).digest('hex').slice(0, 8)
+			// Fetch transactions
+			const data = await parseAddress(session.metadata.wallet)
 
-		const component = <MyDocument reportData={data} />;
-		return (
-			<main className="flex h-screen w-screen flex-col items-center justify-center">
-				<Image
-					src={heroBg}
-					alt="background"
-					quality={100}
-					fill
-					sizes="100vw"
-					className="object-cover fixed -z-10"
-					priority
-				/>
-				<h1 className="text-white m-10">
-					<b>
-						Report Ready
-					</b>
-				</h1>
-				<PdfRendered pdfComponent={component} />
-			</main>
-		);
-	} else {
+			data.email = session.customer_details?.email as string;
+
+			data.id = hash.update(`${data.email}${data.wallet}`).digest('hex').slice(0, 8)
+
+			const component = <MyDocument reportData={data} />;
+			return (
+				<main className="flex h-screen w-screen flex-col items-center justify-center">
+					<Image
+						src={heroBg}
+						alt="background"
+						quality={100}
+						fill
+						sizes="100vw"
+						className="object-cover fixed -z-10"
+						priority
+					/>
+					<h1 className="text-white m-10">
+						<b>
+							Report Ready
+						</b>
+					</h1>
+					<PdfRendered pdfComponent={component} />
+				</main>
+			);
+		} else {
+			return (
+				<main className="flex h-screen w-screen flex-col items-center justify-center">
+					<Image
+						src={heroBg}
+						alt="background"
+						quality={100}
+						fill
+						sizes="100vw"
+						className="object-cover fixed -z-10"
+						priority
+					/>
+					<h1 className="text-white">
+						<b>
+							Invalid session
+						</b>
+					</h1>
+				</main>
+			)
+		}
+	} catch (error) {
 		return (
 			<main className="flex h-screen w-screen flex-col items-center justify-center">
 				<Image
