@@ -1,3 +1,5 @@
+import { FullReport } from "@/actions";
+
 export type WalletSummary = {
 	interactions: number;
 	chains?: number;
@@ -36,14 +38,10 @@ export function parseData(data: any[]) {
 	))
 }
 
-export function getExchangesInteracted(data: any[]): WalletSummary {
-	const exchanges: number[] = []
-	data.forEach(t => {
-		if (!exchanges.includes(t.cxName)) {
-			exchanges.push(t);
-		}
-	});
+export function getExchangesInteracted(data: FullReport): WalletSummary {
+	const exchanges = data.ethereum?.length + data.bsc.length + data.arbitrum?.length;
+
 	return {
-		interactions: exchanges.length
+		interactions: exchanges
 	}
 }

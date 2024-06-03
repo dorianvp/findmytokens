@@ -31,30 +31,33 @@ export default function Address({ params }: { params: { address: string } }) {
 				sizes="100vh"
 				className="object-cover fixed -z-10"
 			/>
-			{!params.address ?
+			{!summary || !params.address ?
 				<>
 					<h2 className="text-white my-5">
 						<b>
 							Analyzing...
 						</b>
 					</h2>
-					<h2 className="text-white my-5">
+					<h4 className="text-white my-5 overflow-hidden text-ellipsis">
 						<b>
 							{params.address}
 						</b>
-					</h2>
+					</h4>
 					<h3 className="text-white mb-10">(this may take a few minutes)</h3>
 				</>
 				:
-				<h2 className="text-white my-10">
-					<b>
-						Success
-					</b>
-				</h2>
+				<>
+					<h2 className="text-white my-10">
+						<b>
+							Success
+						</b>
+					</h2>
+					<h4 className="text-white">Interacted with {summary?.interactions} exhanges</h4>
+				</>
 			}
 			{summary &&
 				<button
-					className="bg-danger text-white w-fit px-6 py-4 rounded-lg flex align-middle items-center"
+					className="bg-danger text-white w-fit px-6 py-4 my-5 rounded-lg flex align-middle items-center"
 					onClick={() => {
 						router.push(`/checkout/${params.address}`)
 					}}

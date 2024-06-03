@@ -11,16 +11,15 @@ import arbData from './app/db-data/arb.csv'
 
 export type FullReport = {
 	wallet: string;
-	ethereum?: any[];
-	bsc?: any[];
-	arbitrum?: any[];
+	ethereum: any[];
+	bsc: any[];
+	arbitrum: any[];
 	interactions: number;
 	email: string;
 	txAnalyzed: number;
 	matches: number;
 	id?: string;
 }
-
 
 export async function parseAddress(address: string): Promise<FullReport> {
 	let fullDB: FullReport = {
@@ -67,21 +66,22 @@ export async function parseAddress(address: string): Promise<FullReport> {
 	});
 
 	let requestData = await requestEtherscanAction('get_account_transactions', address);
+
 	let result = analyzeNormalTransActions(requestData.result, ethDB)
-	fullDB.txAnalyzed += preEth.length;
+	fullDB.txAnalyzed += requestData.result.length;
 	fullDB.matches += result.length;
 	fullDB.ethereum = result;
 
 	requestData = await requestBscscanAction('get_account_transactions', address);
 
 	result = analyzeNormalTransActions(requestData.result, bscDB)
-	fullDB.txAnalyzed += preBsc.length;
+	fullDB.txAnalyzed += requestData.result.length;
 	fullDB.matches += result.length;
 	fullDB.bsc = result;
 
 	requestData = await requestArbiscanAction('get_account_transactions', address);
 	result = analyzeNormalTransActions(requestData.result, arbDB)
-	fullDB.txAnalyzed += preArb.length;
+	fullDB.txAnalyzed += requestData.result.length;
 	fullDB.matches += result.length;
 	fullDB.arbitrum = result;
 
@@ -89,25 +89,27 @@ export async function parseAddress(address: string): Promise<FullReport> {
 }
 
 export async function getSummary(address: string) {
-	const etherscanData = await requestEtherscanAction('get_account_transactions', address);
-	// const bscData = await requestBscscanAction('get_account_transactions', address)
+	// const etherscanData = await requestEtherscanAction('get_account_transactions', address);
+	// // const bscData = await requestBscscanAction('get_account_transactions', address)
 
-	let pre: any[] = [];
+	// let pre: any[] = [];
 
-	ethData.forEach((i: any) => {
-		pre.push({ exchangeAddress: i.exchangeAddress, exchangeName: i.exchangeName })
-	});
+	const parsedData = await parseAddress(address);
 
-	let db = {}
+	// ethData.forEach((i: any) => {
+	// 	pre.push({ exchangeAddress: i.exchangeAddress, exchangeName: i.exchangeName })
+	// });
 
-	pre.forEach((obj: any) => {
-		// @ts-ignore
-		db[obj[Object.keys(obj)[0]]] = obj[Object.keys(obj)[1]]
-	});
+	// let db = {}
 
-	const result = analyzeNormalTransActions(etherscanData.result, db)
-	// redirect(`${formData.get('address')}`);
-	const r = getExchangesInteracted(result);
+	// pre.forEach((obj: any) => {
+	// 	// @ts-ignore
+	// 	db[obj[Object.keys(obj)[0]]] = obj[Object.keys(obj)[1]]
+	// });
+
+	// const result = analyzeNormalTransActions(etherscanData.result, db);
+	// // redirect(`${formData.get('address')}`);
+	const r = getExchangesInteracted(parsedData);
 	// console.log('RESPONSE', r);
 
 	return r;
