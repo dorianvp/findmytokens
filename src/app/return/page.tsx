@@ -1,9 +1,12 @@
+'use server'
+
 import Image from "next/image";
 import heroBg from '../../../public/bg.png';
 import Stripe from "stripe";
 import { MyDocument } from "../components/FullReport";
 import { PdfRendered } from "../components/PdfRenderer";
-import { getSummary, parseAddress } from "@/actions";
+import { parseAddress } from "@/actions";
+import { createHash } from 'crypto';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
@@ -13,18 +16,18 @@ export default async function Home({ searchParams }: {
 	};
 }) {
 
-	console.log(searchParams.session_id);
-
 	const session_id = searchParams.session_id;
 	if (!session_id) throw new Error("Missing session id");
 	const session = await stripe.checkout.sessions.retrieve(session_id);
 	if (session.payment_status == 'paid' && session.metadata) {
-		console.log('paid');
+		const hash = createHash('sha512');
 
 		// Fetch transactions
 		const data = await parseAddress(session.metadata.wallet)
 
 		data.email = session.customer_details?.email as string;
+
+		data.id = hash.update(`${data.email}${data.wallet}`).digest('hex').slice(0, 8)
 
 		const component = <MyDocument reportData={data} />;
 		return (

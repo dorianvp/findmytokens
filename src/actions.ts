@@ -18,6 +18,7 @@ export type FullReport = {
 	email: string;
 	txAnalyzed: number;
 	matches: number;
+	id?: string;
 }
 
 
@@ -52,9 +53,6 @@ export async function parseAddress(address: string): Promise<FullReport> {
 		preArb.push({ exchangeAddress: i.exchangeAddress, exchangeName: i.exchangeName })
 	});
 
-
-
-
 	preEth.forEach((obj: any) => {
 		// @ts-ignore
 		ethDB[obj[Object.keys(obj)[0]]] = obj[Object.keys(obj)[1]]
@@ -86,8 +84,6 @@ export async function parseAddress(address: string): Promise<FullReport> {
 	fullDB.txAnalyzed += preArb.length;
 	fullDB.matches += result.length;
 	fullDB.arbitrum = result;
-
-	// console.log(fullDB);
 
 	return fullDB;
 }
