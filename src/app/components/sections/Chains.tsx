@@ -18,44 +18,44 @@ export function Chains() {
 					</h2>
 					<ul className="flex flex-col justify-evenly items-center h-full xl:items-start">
 						<li className="w-1/2">
-							<h4 className="inline-flex">
+							<p className="inline-flex">
 								<Image
 									src={tickIcon}
 									alt="tick"
 									className="mr-2"
 								/>
 								Ethereum
-							</h4>
+							</p>
 						</li>
 						<li className="w-1/2">
-							<h4 className="inline-flex">
+							<p className="inline-flex">
 								<Image
 									src={tickIcon}
 									alt="tick"
 									className="mr-2"
 								/>
 								Binance Smart Chain
-							</h4>
+							</p>
 						</li>
 						<li className="w-1/2">
-							<h4 className="inline-flex">
+							<p className="inline-flex">
 								<Image
 									src={tickIcon}
 									alt="tick"
 									className="mr-2"
 								/>
 								Arbitrum
-							</h4>
+							</p>
 						</li>
 						<li className="w-1/2">
-							<h4 className="inline-flex">
+							<p className="inline-flex">
 								<Image
 									src={tickIcon}
 									alt="tick"
 									className="mr-2"
 								/>
 								(More coming soon)
-							</h4>
+							</p>
 						</li>
 						{/* <li>
 							<h4 className="inline-flex">

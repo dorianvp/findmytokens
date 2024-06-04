@@ -21,12 +21,12 @@ export function Pricing() {
 			<div className="flex flex-col px-10 py-5 bg-white items-center justify-center rounded-xl mx-5 w-full md:w-8/12">
 				<p className="text-purple">INSTITUTIONAL</p>
 				<h3 className="py-5 text-center">
-					<b>
+					<b className="font-mono">
 						Need help with more wallets?
 					</b>
 				</h3>
 				<h3 className="pb-5 text-center">
-					<b>
+					<b className="font-mono">
 						Do you require a deeper analysis?
 					</b>
 				</h3>
@@ -50,11 +50,11 @@ function PriceCard({ title, desc, className }: PriceCardProps & HTMLAttributes<H
 	return (
 		<div className={`flex flex-col px-10 py-8 bg-white items-center justify-center rounded-xl grow ${className}`}>
 			<p className="text-purple">STARTER</p>
-			<h2>
+			<h2 className="font-mono">
 				{title}
 			</h2>
 			<p className="p-5">
-				<b>
+				<b className="font-mono">
 					{desc}
 				</b>
 			</p>

@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import localFont from 'next/font/local';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
-const rubik = Rubik({
-  weight: ['400', '700'],
-  subsets: ["latin"],
-  display: 'auto'
+const khand = localFont({
+  src: '../../public/fonts/khand/Khand-Variable.ttf',
+  display: 'auto',
+  variable: '--font-khand'
+});
+
+const jakartaPlus = localFont({
+  src: '../../public/fonts/plus-jakarta-sans/PlusJakartaSans-Variable.ttf',
+  display: 'auto',
+  variable: '--font-jakarta-plus'
 });
 
 export const metadata: Metadata = {
@@ -32,7 +38,7 @@ export default function RootLayout({
           gtag('config', 'G-55D92HZQR9');
         </script> */}
       </head>
-      <body className={rubik.className}>{children}</body>
+      <body className={`${khand.variable} ${jakartaPlus.variable}`}>{children}</body>
       <GoogleAnalytics gaId="G-55D92HZQR9" />
     </html>
   );

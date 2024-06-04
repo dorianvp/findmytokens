@@ -11,7 +11,7 @@ export function Sample() {
 			</h1>
 			<h4 className='my-5 text-nowrap text-center text-base overflow-hidden md:text-2xl text-ellipsis w-10/12'>
 				Wallet analyzed: <br />
-				<b>
+				<b className='font-mono'>
 					0x33F9f73C0e01cd5483Fc7Bc0aC23EB670Bf34f2B
 				</b>
 			</h4>

@@ -6,7 +6,7 @@ import { HeroForm } from "../hero-form";
 
 export function Hero() {
 	return (
-		<section className="flex flex-col p-3 md:p-5 min-h-screen">
+		<section className="flex flex-col justify-center items-center p-3 md:p-5 min-h-screen w-full">
 			<Image
 				src={heroBg}
 				alt="background"
@@ -31,13 +31,12 @@ export function Hero() {
 					</b>
 				</h3>
 			</nav>
-			<div className="flex items-center p-6 md:p-12 min-h-screen">
-				<div className="w-full lg:w-1/2">
-					<h1 className="my-5 text-white text-4xl md:text-6xl"><b>Find Out Which Exchanges Sent Or Received Tokens From Your Wallet</b></h1>
-					<h3 className="my-5 text-white text-base md:text-xl">FindMyCoins analyses wallet transactions and matches them to the addresses of centralized exchanges, helping to recover drained accounts, check for unclaimed balances, and better recordkeeping.
-					</h3>
-					<HeroForm />
-				</div>
+			<div className="flex flex-col items-center justify-center md:p-12 min-h-screen h-full w-10/12 md:w-8/12">
+				<h1 className="my-5 text-white text-center text-4xl md:text-6xl"><b>Find Lost Tokens</b></h1>
+				<p className="my-5 text-white text-center text-base md:text-xl h-full">
+					FindMyTokens matches wallet transactions to exchange addresses, aiding in account recovery, identifying unclaimed balances, and improving recordkeeping.
+				</p>
+				<HeroForm />
 				<span className="w-0 lg:w-1/2" />
 			</div>
 		</section>
