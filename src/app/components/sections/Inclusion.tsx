@@ -19,10 +19,12 @@ export function Inclusion() {
 					<div className="flex flex-col w-full md:w-1/2 px-5 md:px-10">
 						<h3 className="text-center">
 							<b>
-								List of all Centralized Exchanges Interacted
+								List of all Centralized Exchanges Interacted:
 							</b>
 						</h3>
-						<p className="text-center my-4">A complete list that includes the names of the centralized exchanges the wallet has interacted with in its lifetime either for sending money to the cold wallet address or receiving from the exchange.</p>
+						<p className="text-center my-4">
+							A comprehensive list containing the names of centralized exchanges with which the wallet has interacted over its lifetime through sending or receiving transactions.
+						</p>
 					</div>
 					<Image
 						src={sc1}
@@ -40,7 +42,9 @@ export function Inclusion() {
 								Time and Date of the Interaction
 							</b>
 						</h3>
-						<p className="text-center my-4">Every report includes a precise snapshot of the time and date of each interaction in that wallet. Get precise information for reporting or accounting needs.</p>
+						<p className="text-center my-4">
+							Each report provides an exact timestamp for every interaction within the wallet, ensuring precise information for reporting or accounting purposes.
+						</p>
 					</div>
 					<Image
 						src={sc2}
@@ -58,7 +62,9 @@ export function Inclusion() {
 								Chain and Wallet address of the interaction
 							</b>
 						</h3>
-						<p className="text-center my-4">Get information about the chain used for the interaction and the wallet address of the exchange that either sent or received tokens to/from your wallet.</p>
+						<p className="text-center my-4">
+							Access details about the blockchain utilized for the interaction and the wallet address of the exchange involved in either sending or receiving tokens to/from your wallet.
+						</p>
 					</div>
 					<Image
 						src={sc3}
