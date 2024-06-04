@@ -141,6 +141,7 @@ exchangeAddress,exchangeName,Chain
 0x3cd751e6b0078be393132286c442345e5dc49699,Coinbase 4,Ethereum
 0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511,Coinbase 5,Ethereum
 0xeb2629a2734e272bcc07bda959863f316f4bd4cf,Coinbase 6,Ethereum
+0xd688aea8f7d450909ade10c47faa95707b0682d9,Coinbase 7,Ethereum
 0x9539e0b14021a43cde41d9d45dc34969be9c7cb0,Coinbene,Ethereum
 0x33683b94334eebc9bd3ea85ddbda4a86fb461405,Coinbene: Cold Wallet,Ethereum
 0xb6ba1931e4e74fd080587688f6db10e830f810d5,Coindelta,Ethereum
@@ -304,6 +305,7 @@ exchangeAddress,exchangeName,Chain
 0x59fae149a8f8ec74d5bc038f8b76d25b136b9573,OKEx 5,Ethereum
 0x98ec059dc3adfbdd63429454aeb0c990fba4a128,OKEx 6,Ethereum
 0x5041ed759dd4afc3a72b8192c143f72f4724081a,OKEx 7,Ethereum
+0xf7858da8a6617f7c6d0ff2bcafdb6d2eedf64840,OKEx 25,Ethereum
 0x03e3ff995863828554282e80870b489cc31dc8bc,OMGFIN Exchange,Ethereum
 0xaeec6f5aca72f3a005af1b3420ab8c8c7009bac8,OTCBTC,Ethereum
 0xcacc694840ecebadd9b4c419e5b7f1d73fedf999,Panda.Exchange 1: Hot Wallet,Ethereum

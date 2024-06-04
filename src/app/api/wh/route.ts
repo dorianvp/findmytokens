@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 import { EmailReportTemplate } from "@/components/mail/report-template";
 import { parseAddress } from "@/actions";
 import { MyDocument } from "@/app/components/FullReport";
-import { pdf, renderToBuffer } from "@react-pdf/renderer";
+import { renderToBuffer } from "@react-pdf/renderer";
 
 const resend = new Resend(process.env.RESEND_KEY as string);
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
@@ -22,7 +22,11 @@ export async function POST(req: Request) {
 		console.log(`⚠️ Webhook signature verification failed.`, err);
 		return Response.error();
 	}
+	console.log(event);
+
 	if (event.type === 'checkout.session.completed') {
+		console.log('Session completed');
+
 		const session = event.data.object;
 		let data = await parseAddress(session.metadata?.wallet as string);
 		data.email = session.customer_details?.email as string;
@@ -40,7 +44,6 @@ export async function POST(req: Request) {
 				content: await renderToBuffer(component)
 			}]
 		});
-		console.log('MAIL:', r);
 	}
 
 	return Response.json({ received: true });
