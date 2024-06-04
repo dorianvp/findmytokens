@@ -52,7 +52,16 @@ export default function Address({ params }: { params: { address: string } }) {
 							Success
 						</b>
 					</h2>
-					<h4 className="text-white">Interacted with {summary?.interactions} exhanges</h4>
+					<p className="text-white">Analyzed {summary?.txs} transactions</p>
+					<p className="text-white">Found interactions in: <br />{summary.chains?.map((chain, i) => {
+						return <>
+							{chain}
+							<br />
+						</>
+					})}</p>
+					<p className="text-white">Interacted with {summary?.interactions} exhanges</p>
+					<p className="text-white">First interaction done at {summary?.firstDate}</p>
+					<p className="text-white">Last interaction done at {summary?.lastDate}</p>
 				</>
 			}
 			{summary &&

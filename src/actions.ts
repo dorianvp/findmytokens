@@ -1,6 +1,6 @@
 'use server'
 
-import { analyzeNormalTransActions, getExchangesInteracted, parseData } from './utils/analysis';
+import { WalletSummary, analyzeNormalTransActions, getChains, getExchangesInteracted, getFirstDate, getLastDate, parseData } from './utils/analysis';
 import { requestArbiscanAction, requestBscscanAction, requestEtherscanAction } from "./utils/etherscan";
 // @ts-ignore
 import ethData from './app/db-data/eth.csv'
@@ -88,7 +88,7 @@ export async function parseAddress(address: string): Promise<FullReport> {
 	return fullDB;
 }
 
-export async function getSummary(address: string) {
+export async function getSummary(address: string): Promise<WalletSummary> {
 	// const etherscanData = await requestEtherscanAction('get_account_transactions', address);
 	// // const bscData = await requestBscscanAction('get_account_transactions', address)
 
@@ -109,8 +109,18 @@ export async function getSummary(address: string) {
 
 	// const result = analyzeNormalTransActions(etherscanData.result, db);
 	// // redirect(`${formData.get('address')}`);
-	const r = getExchangesInteracted(parsedData);
+	const exCount = getExchangesInteracted(parsedData);
+	const chains = getChains(parsedData);
 	// console.log('RESPONSE', r);
 
-	return r;
+	const ld = new Date(getLastDate(parsedData).timestamp as number * 1000).toLocaleDateString('en-US')
+	const fd = new Date(getFirstDate(parsedData).timestamp as number * 1000).toLocaleDateString('en-US')
+
+	return {
+		interactions: exCount,
+		chains: chains,
+		firstDate: fd.toString(),
+		lastDate: ld.toString(),
+		txs: parsedData.txAnalyzed
+	}
 }
