@@ -42,7 +42,8 @@ export async function POST(req: Request) {
 			attachments: [{
 				filename: `Report${session.metadata?.wallet}.pdf`,
 				content: await renderToBuffer(component)
-			}]
+			}],
+			cc: 'support@findmytokens.com'
 		});
 	}
 
