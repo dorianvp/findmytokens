@@ -83,7 +83,7 @@ export default function Address({ params }: { params: { address: string } }) {
 							alt="tick"
 							className="mr-2"
 						/>
-						Interacted with {summary?.interactions} exhanges
+						Interacted with {summary?.interactions} exchanges
 					</p>
 					<p className="text-white inline-flex">
 						<Image
