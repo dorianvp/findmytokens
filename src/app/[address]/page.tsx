@@ -71,7 +71,7 @@ export default function Address({ params }: { params: { address: string } }) {
 					<ul className="flex flex-col justify-evenly items-center h-full xl:items-start pl-10">
 						<br />
 						{summary.chains?.map((chain, i) => {
-							return <li>
+							return <li key={i}>
 								<p className="inline-flex text-white">
 									{chain}
 								</p>
