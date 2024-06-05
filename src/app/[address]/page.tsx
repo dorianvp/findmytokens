@@ -69,7 +69,6 @@ export default function Address({ params }: { params: { address: string } }) {
 						Found interactions in: <br />
 					</p>
 					<ul className="flex flex-col justify-evenly items-center h-full xl:items-start pl-10">
-						<br />
 						{summary.chains?.map((chain, i) => {
 							return <li key={i}>
 								<p className="inline-flex text-white">
