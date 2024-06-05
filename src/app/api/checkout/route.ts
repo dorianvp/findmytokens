@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
+const PRICE_ID = process.env.STRIPE_PRODUCT_ID as string;
+
 export async function POST(req: NextRequest) {
 	try {
 		const { address: address } = await req.json();
@@ -13,7 +15,7 @@ export async function POST(req: NextRequest) {
 				{
 					// Provide the exact Price ID (for example, pr_1234) of
 					// the product you want to sell
-					price: 'price_1PJGGLKmBD1HOo7RSWcDbdvc',
+					price: PRICE_ID,
 					quantity: 1,
 				},
 			],
