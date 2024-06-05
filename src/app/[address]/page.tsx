@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import heroBg from '../../../public/bg.png';
+import tickIcon from '../../../public/tick.svg';
 import { useCallback, useEffect, useState } from "react";
 import { getSummary } from "@/actions";
 import { WalletSummary } from "@/utils/analysis";
@@ -32,8 +33,8 @@ export default function Address({ params }: { params: { address: string } }) {
 				className="object-cover fixed -z-10"
 			/>
 			{!summary || !params.address ?
-				<>
-					<h2 className="text-white my-5">
+				<div>
+					<h2 className="text-white my-5 text-center">
 						<b>
 							Analyzing...
 						</b>
@@ -44,25 +45,64 @@ export default function Address({ params }: { params: { address: string } }) {
 						</b>
 					</h4>
 					<h3 className="text-white mb-10">(this may take a few minutes)</h3>
-				</>
+				</div>
 				:
-				<>
-					<h2 className="text-white my-10">
+				<div className="flex flex-col">
+					<h2 className="text-white my-10 text-center">
 						<b>
 							Success
 						</b>
 					</h2>
-					<p className="text-white">Analyzed {summary?.txs} transactions</p>
-					<p className="text-white">Found interactions in: <br />{summary.chains?.map((chain, i) => {
-						return <>
-							{chain}
-							<br />
-						</>
-					})}</p>
-					<p className="text-white">Interacted with {summary?.interactions} exhanges</p>
-					<p className="text-white">First interaction done at {summary?.firstDate}</p>
-					<p className="text-white">Last interaction done at {summary?.lastDate}</p>
-				</>
+					<p className="text-white inline-flex">
+						<Image
+							src={tickIcon}
+							alt="tick"
+							className="mr-2"
+						/> Analyzed {summary?.txs} transactions
+					</p>
+					<p className="text-white inline-flex">
+						<Image
+							src={tickIcon}
+							alt="tick"
+							className="mr-2"
+						/>
+						Found interactions in: <br />
+					</p>
+					<ul className="flex flex-col justify-evenly items-center h-full xl:items-start pl-10">
+						<br />
+						{summary.chains?.map((chain, i) => {
+							return <li>
+								<p className="inline-flex text-white">
+									{chain}
+								</p>
+							</li>
+						})}
+					</ul>
+					<p className="text-white inline-flex">
+						<Image
+							src={tickIcon}
+							alt="tick"
+							className="mr-2"
+						/>
+						Interacted with {summary?.interactions} exhanges
+					</p>
+					<p className="text-white inline-flex">
+						<Image
+							src={tickIcon}
+							alt="tick"
+							className="mr-2"
+						/>
+						First interaction done at {summary?.firstDate}
+					</p>
+					<p className="text-white inline-flex">
+						<Image
+							src={tickIcon}
+							alt="tick"
+							className="mr-2"
+						/>
+						Last interaction done at {summary?.lastDate}
+					</p>
+				</div>
 			}
 			{summary &&
 				<button
