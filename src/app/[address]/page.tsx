@@ -22,7 +22,7 @@ export default function Address({ params }: { params: { address: string } }) {
 	}, []);
 
 	return (
-		<main className="flex h-screen flex-col items-center justify-center">
+		<main className="flex min-h-screen h-full flex-col items-center justify-center">
 			<Image
 				src={heroBg}
 				alt="background"

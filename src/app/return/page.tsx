@@ -34,7 +34,7 @@ export default async function Home({ searchParams }: {
 
 			const component = <MyDocument reportData={data} />;
 			return (
-				<main className="flex h-screen w-screen flex-col items-center justify-center">
+				<main className="flex min-h-screen h-full w-screen flex-col items-center justify-center">
 					<Image
 						src={heroBg}
 						alt="background"
@@ -54,7 +54,7 @@ export default async function Home({ searchParams }: {
 			);
 		} else {
 			return (
-				<main className="flex h-screen w-screen flex-col items-center justify-center">
+				<main className="flex min-h-screen h-full w-screen flex-col items-center justify-center">
 					<Image
 						src={heroBg}
 						alt="background"
