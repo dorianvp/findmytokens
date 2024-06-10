@@ -14,7 +14,7 @@ export function Pricing() {
 				</b>
 			</h2>
 			<section className="flex justify-between items-center my-10 w-full md:w-8/12">
-				<PriceCard title="$29.99" desc="1 Wallet Report" className="w-full" />
+				<PriceCard title="$14.99" desc="1 Wallet Report" className="w-full" />
 				{/* <PriceCard title="$99.99" desc="4 Wallet Report" className="mr-5" />
 				<PriceCard title="$150.00" desc="7 Wallet Report" /> */}
 			</section>
