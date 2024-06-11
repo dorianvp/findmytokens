@@ -38,6 +38,16 @@ export function Hero() {
 				</p>
 				<HeroForm />
 				<span className="w-0 lg:w-1/2" />
+				<a
+					className="my-5"
+					href="https://www.producthunt.com/posts/findmytokens?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-findmytokens"
+					target="_blank"
+				>
+					<img
+						src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=462605&theme=light"
+						alt="product-hunt"
+					/>
+				</a>
 			</div>
 		</section>
 	)

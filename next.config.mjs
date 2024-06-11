@@ -17,6 +17,16 @@ const nextConfig = {
 
 		return config
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'api.producthunt.com',
+				port: '',
+				pathname: '/widgets/**'
+			},
+		],
+	},
 };
 
 export default nextConfig;
