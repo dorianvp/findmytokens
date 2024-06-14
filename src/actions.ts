@@ -110,11 +110,20 @@ export async function getSummary(address: string): Promise<WalletSummary> {
 	// const result = analyzeNormalTransActions(etherscanData.result, db);
 	// // redirect(`${formData.get('address')}`);
 	const exCount = getExchangesInteracted(parsedData);
+
 	const chains = getChains(parsedData);
 	// console.log('RESPONSE', r);
 
+	if (exCount == 0) {
+		return {
+			interactions: 0,
+			txs: parsedData.txAnalyzed,
+			chains: chains,
+		}
+	}
+
 	const ld = new Date(getLastDate(parsedData).timestamp as number * 1000).toLocaleDateString('en-US')
-	const fd = new Date(getFirstDate(parsedData).timestamp as number * 1000).toLocaleDateString('en-US')
+	const fd = new Date(getFirstDate(parsedData)?.timestamp as number * 1000).toLocaleDateString('en-US')
 
 	return {
 		interactions: exCount,
