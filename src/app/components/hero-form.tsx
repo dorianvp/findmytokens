@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 export function HeroForm() {
 	const router = useRouter();
@@ -12,7 +13,7 @@ export function HeroForm() {
 			onSubmit={(e: FormEvent) => {
 				e.preventDefault();
 				if (address) {
-					// if (address == '0xa322BAfebb305bf55EAD5E03Fd6372c2574df6a3') // delete later
+					sendGTMEvent({ event: 'scanAddress', value: address })
 					router.push(`/${address}`)
 				}
 			}}
