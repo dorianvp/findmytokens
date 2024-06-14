@@ -13,7 +13,7 @@ export function HeroForm() {
 			onSubmit={(e: FormEvent) => {
 				e.preventDefault();
 				if (address) {
-					sendGTMEvent({ event: 'scanAddress', value: address })
+					// sendGTMEvent({ event: 'scanAddress', value: address })
 					router.push(`/${address}`)
 				}
 			}}
