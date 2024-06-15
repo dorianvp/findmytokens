@@ -18,7 +18,7 @@ const jakartaPlus = localFont({
 
 export const metadata: Metadata = {
   title: "FindMyTokens",
-  description: "Find Unclaimed Tokens On Forgotten Exchange Accounts",
+  description: "FindMyTokens matches wallet transactions to exchange deposit addresses, aiding in account recovery, identifying unclaimed balances, and improving recordkeeping.",
 };
 
 export default function RootLayout({
