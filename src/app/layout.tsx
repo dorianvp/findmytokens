@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const khand = localFont({
   src: '../../public/fonts/khand/Khand-Variable.ttf',
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body className={`${khand.variable} ${jakartaPlus.variable}`}>{children}</body>
       <GoogleAnalytics gaId="G-55D92HZQR9" />
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
