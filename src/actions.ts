@@ -8,6 +8,11 @@ import ethData from './app/db-data/eth.csv'
 import bscData from './app/db-data/bsc.csv'
 // @ts-ignore
 import arbData from './app/db-data/arb.csv'
+import { GetEnsAddressReturnType, getEnsAddress } from 'wagmi/actions';
+import { isAddress } from 'viem';
+import { config } from './config';
+import { normalize } from 'viem/ens'
+import { redirect } from 'next/navigation';
 
 export type FullReport = {
 	wallet: string;
@@ -131,5 +136,18 @@ export async function getSummary(address: string): Promise<WalletSummary> {
 		firstDate: fd.toString(),
 		lastDate: ld.toString(),
 		txs: parsedData.txAnalyzed
+	}
+}
+
+export async function resolveInput(formData: FormData) {
+	const address = formData.get('address') as string;
+	if (address) {
+		let resolvedAddress: GetEnsAddressReturnType | string = address
+		if (!isAddress(address)) {
+			resolvedAddress = await getEnsAddress(config, {
+				name: normalize(address),
+			})
+		}
+		redirect(`/${resolvedAddress}`)
 	}
 }

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "FindMyTokens matches wallet transactions to exchange deposit addresses, aiding in account recovery, identifying unclaimed balances, and improving recordkeeping.",
     url: 'https://findmytokens.com',
     siteName: 'FindMyTokens',
-    type: "website"
+    type: "website",
   }
 };
 

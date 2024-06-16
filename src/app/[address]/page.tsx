@@ -8,6 +8,7 @@ import { getSummary } from "@/actions";
 import { WalletSummary } from "@/utils/analysis";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Address({ params }: { params: { address: string } }) {
 	const router = useRouter();
@@ -20,6 +21,7 @@ export default function Address({ params }: { params: { address: string } }) {
 
 	useEffect(() => {
 		summarize();
+		sendGAEvent({ event: 'scanAddress', value: params.address })
 	}, []);
 
 	return (

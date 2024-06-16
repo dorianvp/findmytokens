@@ -1,30 +1,16 @@
-'use client'
 
-import { useRouter } from "next/navigation";
-import { ChangeEvent, FormEvent, useState } from "react";
-import { sendGAEvent } from '@next/third-parties/google'
+import { resolveInput } from "@/actions";
 
 export function HeroForm() {
-	const router = useRouter();
-	const [address, setAddress] = useState<string>('')
 	return (
 		<form
 			className="flex flex-col p-5 mt-2 w-full bg-white rounded-xl md:mt-6 lg:mt-10 lg:flex-row"
-			onSubmit={(e: FormEvent) => {
-				e.preventDefault();
-				if (address) {
-					sendGAEvent({ event: 'scanAddress', value: address })
-					router.push(`/${address}`)
-				}
-			}}
+			action={resolveInput}
 		>
 			<input
 				type="text"
 				placeholder="Address"
 				name="address"
-				onChange={(e: ChangeEvent<HTMLInputElement>) => {
-					setAddress(e.target.value)
-				}}
 				className="flex-grow px-2 py-4 w-full bg-white rounded-2xl border border-gray lg:mx-2 lg:w-max"
 			/>
 			<button
