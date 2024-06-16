@@ -15,10 +15,7 @@ export default async function Home({ searchParams }: {
 		session_id: string
 	};
 }) {
-
 	try {
-
-
 		const session_id = searchParams.session_id;
 		if (!session_id) throw new Error("Missing session id");
 		const session = await stripe.checkout.sessions.retrieve(session_id);
@@ -34,15 +31,15 @@ export default async function Home({ searchParams }: {
 
 			const component = <MyDocument reportData={data} />;
 			return (
-				<main className="flex min-h-dvh h-full w-screen flex-col items-center justify-center">
+				<main className="flex min-h-screen w-screen flex-col items-center justify-center overflow-hidden relative">
 					<Image
 						src={heroBg}
 						alt="background"
-						quality={100}
-						fill
-						sizes="100vw"
-						className="object-cover fixed -z-10"
 						priority
+						quality={90}
+						sizes="100lvh"
+						fill
+						className="object-cover fixed -z-10"
 					/>
 					<h1 className="text-white m-10">
 						<b>
@@ -60,7 +57,7 @@ export default async function Home({ searchParams }: {
 						alt="background"
 						quality={100}
 						fill
-						sizes="100vw"
+						sizes="100dvh"
 						className="object-cover fixed -z-10"
 						priority
 					/>
@@ -80,7 +77,7 @@ export default async function Home({ searchParams }: {
 					alt="background"
 					quality={100}
 					fill
-					sizes="100vw"
+					sizes="100dvh"
 					className="object-cover fixed -z-10"
 					priority
 				/>

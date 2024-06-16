@@ -25,30 +25,30 @@ export default function Address({ params }: { params: { address: string } }) {
 	}, []);
 
 	return (
-		<main className="flex min-h-screen h-full flex-col items-center justify-center">
+		<main className="flex min-h-screen flex-col items-center justify-center overflow-hidden relative">
 			<Image
 				src={heroBg}
 				alt="background"
 				priority
-				quality={100}
+				quality={90}
+				sizes="100svh"
 				fill
-				sizes="100vh"
 				className="object-cover fixed -z-10"
 			/>
 			{!summary || !params.address ?
-				<div>
+				<>
 					<h2 className="text-white my-5 text-center">
 						<b>
-							Analyzing...
+							Analyzing
 						</b>
 					</h2>
-					<h4 className="text-white my-5 overflow-hidden text-ellipsis">
+					<p className="text-white my-5 text-ellipsis text-base">
 						<b>
 							{params.address}
 						</b>
-					</h4>
-					<h3 className="text-white mb-10">(this may take a few minutes)</h3>
-				</div>
+					</p>
+					<p className="text-white mb-10">(this may take a few minutes)</p>
+				</>
 				:
 				summary.interactions > 0 ?
 					<div className="flex flex-col">
