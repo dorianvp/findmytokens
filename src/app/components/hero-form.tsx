@@ -14,7 +14,7 @@ export function HeroForm() {
 		>
 			<Input
 				type="text"
-				placeholder="Address"
+				placeholder="Enter an address or ENS name"
 				name="address"
 				className="flex-grow w-full bg-white rounded-2xl border border-gray lg:mx-2 lg:w-max"
 			/>
