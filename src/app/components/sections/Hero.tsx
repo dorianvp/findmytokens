@@ -46,6 +46,8 @@ export function Hero() {
 					<img
 						src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=462605&theme=light"
 						alt="product-hunt"
+						height={250}
+						width={250}
 					/>
 				</a>
 			</div>
