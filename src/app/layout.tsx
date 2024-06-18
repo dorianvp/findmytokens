@@ -39,14 +39,6 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
         <meta name="google-site-verification" content="7q9syfElLokwsvPkNlNSukWpyXP6HdJs3Bvp7Ue_MFw" />
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-55D92HZQR9"></script> */}
-        {/* <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-55D92HZQR9');
-        </script> */}
       </head>
       <body className={`${khand.variable} ${jakartaPlus.variable}`}>
         {children}
