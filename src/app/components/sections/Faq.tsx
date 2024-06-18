@@ -10,11 +10,11 @@ export function FAQ() {
 	return (
 		<section className="p-20 w-full">
 			<section className="flex mb-10">
-				<h1 className="text-dark-gray text-center">
+				<h2 className="text-dark-gray text-center">
 					<b>
 						Frequently Asked Questions
 					</b>
-				</h1>
+				</h2>
 			</section>
 			<Separator />
 			<Accordion type="single" collapsible>

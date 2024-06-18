@@ -5,11 +5,11 @@ import { HTMLAttributes } from 'react';
 export function CaseStudies() {
 	return (
 		<section className="flex flex-col justify-center items-center p-10">
-			<h1 className="my-5 text-center">
+			<h2 className="my-5 text-center">
 				<b>
 					How has FindMyTokens helped
 				</b>
-			</h1>
+			</h2>
 			<h3 className='my-5 text-center'>
 				Explore the use cases and gains users have taken
 				using FindMyTokens

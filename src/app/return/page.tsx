@@ -41,11 +41,11 @@ export default async function Home({ searchParams }: {
 						fill
 						className="object-cover fixed -z-10"
 					/>
-					<h1 className="text-white m-10">
+					<h2 className="text-white m-10">
 						<b>
 							Report Ready
 						</b>
-					</h1>
+					</h2>
 					<PdfRendered pdfComponent={component} />
 				</main>
 			);
@@ -61,11 +61,11 @@ export default async function Home({ searchParams }: {
 						className="object-cover fixed -z-10"
 						priority
 					/>
-					<h1 className="text-white">
+					<h2 className="text-white">
 						<b>
 							Invalid session
 						</b>
-					</h1>
+					</h2>
 				</main>
 			)
 		}
@@ -81,11 +81,11 @@ export default async function Home({ searchParams }: {
 					className="object-cover fixed -z-10"
 					priority
 				/>
-				<h1 className="text-white">
+				<h2 className="text-white">
 					<b>
 						Invalid session
 					</b>
-				</h1>
+				</h2>
 			</main>
 		)
 	}

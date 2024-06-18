@@ -5,11 +5,11 @@ import sc3 from '../../../../public/sc3.png';
 
 export function Inclusion() {
 	return <section className="flex flex-col items-center p-10 md:p-20">
-		<h1 className="my-10 text-center">
+		<h2 className="my-10 text-center">
 			<b>
 				What is included on the report
 			</b>
-		</h1>
+		</h2>
 		<h3 className="text-dark-gray my-5 text-center">
 			Information we attach to each report we generate
 		</h3>
