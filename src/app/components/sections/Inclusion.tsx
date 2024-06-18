@@ -29,6 +29,7 @@ export function Inclusion() {
 					<Image
 						src={sc1}
 						alt="placeholder"
+						quality={75}
 						className="w-full md:w-1/2 object-contain md:h-96"
 					/>
 
@@ -49,6 +50,7 @@ export function Inclusion() {
 					<Image
 						src={sc2}
 						alt="placeholder"
+						quality={75}
 						className="w-full md:w-1/2 object-contain md:h-96"
 					/>
 
@@ -69,6 +71,7 @@ export function Inclusion() {
 					<Image
 						src={sc3}
 						alt="placeholder"
+						quality={75}
 						className="w-full md:w-1/2 object-contain md:h-96"
 					/>
 

@@ -10,7 +10,7 @@ export function Hero() {
 			<Image
 				src={heroBg}
 				alt="background"
-				quality={100}
+				quality={75}
 				fill
 				sizes="100vw"
 				className="object-cover fixed -z-10"
@@ -18,7 +18,7 @@ export function Hero() {
 			<Image
 				src={heroWave}
 				alt="background"
-				quality={100}
+				quality={75}
 				sizes="100vw"
 				className="object-fill absolute -left-0 -bottom-1 w-full -z-10"
 			/>

@@ -18,6 +18,7 @@ export function Sample() {
 			<Image
 				src={placeholder}
 				alt='placeholder'
+				quality={75}
 			/>
 		</section>
 	)
