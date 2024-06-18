@@ -9,12 +9,12 @@ export function Sample() {
 					Check out a sample report
 				</b>
 			</h2>
-			<h4 className='my-5 text-nowrap text-center text-base overflow-hidden md:text-2xl text-ellipsis w-10/12'>
+			<p className='my-5 text-nowrap text-center text-base overflow-hidden md:text-2xl text-ellipsis w-10/12'>
 				Wallet analyzed: <br />
 				<b className='font-mono'>
 					0x3acaa48EAa8A51d10d0417A6Fbd2a41550d04a8c
 				</b>
-			</h4>
+			</p>
 			<Image
 				src={placeholder}
 				alt='placeholder'
