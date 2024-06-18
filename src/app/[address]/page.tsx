@@ -9,6 +9,7 @@ import { WalletSummary } from "@/utils/analysis";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { sendGAEvent } from "@next/third-parties/google";
+import { Button } from "@/components/ui/button";
 
 export default function Address({ params }: { params: { address: string } }) {
 	const router = useRouter();
@@ -116,14 +117,15 @@ export default function Address({ params }: { params: { address: string } }) {
 					</div>
 			}
 			{summary && summary.interactions > 0 &&
-				<button
-					className="bg-danger text-white w-fit px-6 py-4 my-5 rounded-lg flex align-middle items-center"
+				<Button
+					variant={"destructive"}
+					className="text-white w-fit flex align-middle items-center rounded-full my-5"
 					onClick={() => {
 						router.push(`/checkout/${params.address}`)
 					}}
 				>
 					Download Report
-				</button>
+				</Button>
 			}
 		</main>
 	);

@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { pdf } from '@react-pdf/renderer';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export function PdfRendered({ pdfComponent }: { pdfComponent: React.ReactElement }) {
 	const [pdfUrl, setPdfUrl] = useState('');
@@ -23,13 +25,20 @@ export function PdfRendered({ pdfComponent }: { pdfComponent: React.ReactElement
 	return (
 		<div>
 			{pdfUrl && (
-				<a
-					href={pdfUrl}
-					download="AnalysisResult.pdf"
-					className="bg-danger text-white w-fit px-6 py-4 rounded-lg flex align-middle items-center"
+				<Button
+					asChild
+					variant={'destructive'}
+					className='rounded-full'
 				>
-					Download PDF
-				</a>
+					<Link
+						href={pdfUrl}
+						target='_blank'
+						download="AnalysisResult.pdf"
+						className="bg-danger text-white w-fit px-6 py-4 rounded-lg flex align-middle items-center"
+					>
+						Download PDF
+					</Link>
+				</Button>
 			)}
 		</div>
 	);
