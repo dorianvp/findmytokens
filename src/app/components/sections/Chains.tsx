@@ -5,13 +5,14 @@ import fisherman from '../../../../public/fisherman.svg';
 import { ArrowIcon } from "../icons/arrow";
 import tickIcon from '../../../../public/tick.svg';
 import { scrollToTop } from "@/utils/browser";
+import { Button } from "@/components/ui/button";
 
 export function Chains() {
 	return (
 		<section className="flex flex-col justify-center items-center py-20 w-full bg-gray">
 			<div className="flex justify-center items-center py-20 w-full">
 				<div className="flex flex-col px-5 md:px-32">
-					<h2 className="my-5 text-center text-2xl md:text-5xl">
+					<h2 className="my-5 text-center">
 						<b>
 							Works with all major EVM Chains
 						</b>
@@ -57,26 +58,6 @@ export function Chains() {
 								(More coming soon)
 							</p>
 						</li>
-						{/* <li>
-							<h4 className="inline-flex">
-								<Image
-									src={tickIcon}
-									alt="tick"
-									className="mr-2"
-								/>
-								Arbitrum
-							</h4>
-						</li>
-						<li>
-							<h4 className="inline-flex">
-								<Image
-									src={tickIcon}
-									alt="tick"
-									className="mr-2"
-								/>
-								Avalanche
-							</h4>
-						</li> */}
 					</ul>
 				</div>
 				<Image
@@ -85,13 +66,13 @@ export function Chains() {
 					className="hidden xl:block"
 				/>
 			</div>
-			<button
-				className="flex items-center px-6 py-4 text-white align-middle bg-indigo-600 rounded-lg w-fit"
+			<Button
+				className="flex items-center text-white align-middle rounded-full w-fit"
 				onClick={scrollToTop}
 			>
 				Generate Report Now
 				<ArrowIcon className="w-6 h-6" />
-			</button>
+			</Button>
 		</section>
 	)
 }

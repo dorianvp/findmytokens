@@ -4,6 +4,7 @@ import { HTMLAttributes } from "react";
 import { ArrowIcon } from "../icons/arrow";
 import { scrollToTop } from "@/utils/browser";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function Pricing() {
 	return (
@@ -30,12 +31,16 @@ export function Pricing() {
 						Do you require a deeper analysis?
 					</b>
 				</h3>
-				<Link
-					className="bg-purple text-white w-fit px-6 py-4 rounded-lg flex align-middle items-center"
-					href={'mailto:support@findmytokens.com'}
+				<Button
+					asChild
+					className="text-white w-fit px-6 py-4 rounded-full flex align-middle items-center"
 				>
-					Contact Us
-				</Link>
+					<Link
+						href={'mailto:support@findmytokens.com'}
+					>
+						Contact Us
+					</Link>
+				</Button>
 			</div>
 		</section>
 	)
@@ -58,13 +63,13 @@ function PriceCard({ title, desc, className }: PriceCardProps & HTMLAttributes<H
 					{desc}
 				</b>
 			</p>
-			<button
-				className="bg-indigo-600 text-white w-fit px-6 py-4 rounded-lg flex align-middle items-center"
+			<Button
+				className="text-white w-fit px-6 py-4 rounded-full flex align-middle items-center"
 				onClick={scrollToTop}
 			>
 				Get Report Now
 				<ArrowIcon className="w-6 h-6" />
-			</button>
+			</Button>
 		</div>
 	)
 }
