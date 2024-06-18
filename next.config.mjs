@@ -26,9 +26,6 @@ const nextConfig = {
 				pathname: '/widgets/**'
 			},
 		],
-	},
-	experimental: {
-		optimizeCss: true
 	}
 };
 
