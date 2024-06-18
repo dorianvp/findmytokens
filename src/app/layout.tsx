@@ -6,13 +6,13 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const khand = localFont({
-  src: '../../public/fonts/khand/Khand-Variable.ttf',
+  src: '../../public/fonts/khand/Khand-Variable.woff',
   display: 'auto',
   variable: '--font-khand'
 });
 
 const jakartaPlus = localFont({
-  src: '../../public/fonts/plus-jakarta-sans/PlusJakartaSans-Variable.ttf',
+  src: '../../public/fonts/plus-jakarta-sans/PlusJakartaSans-Variable.woff',
   display: 'auto',
   variable: '--font-jakarta-plus'
 });
