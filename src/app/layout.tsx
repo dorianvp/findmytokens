@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     siteName: 'FindMyTokens',
     type: "website",
   },
+  icons: {
+    icon: '/favicon.ico',
+  },
   alternates: {
     canonical: 'https://findmytokens.com',
   }
