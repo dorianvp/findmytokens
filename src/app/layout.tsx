@@ -28,6 +28,7 @@ const jakartaPlus = localFont({
 export const metadata: Metadata = {
   title: "FindMyTokens",
   description: "FindMyTokens matches wallet transactions to exchange deposit addresses, aiding in account recovery, identifying unclaimed balances, and improving recordkeeping.",
+  metadataBase: new URL("https://findmytokens.com"),
   openGraph: {
     title: "FindMyTokens",
     description: "FindMyTokens matches wallet transactions to exchange deposit addresses, aiding in account recovery, identifying unclaimed balances, and improving recordkeeping.",
