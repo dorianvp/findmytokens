@@ -25,7 +25,7 @@ export function Hero() {
 			<nav className="w-full">
 				<h1 className="text-white w-fit text-2xl">
 					<b>
-						<Link href='/'>
+						<Link href='#'>
 							FindMyTokens
 						</Link>
 					</b>
