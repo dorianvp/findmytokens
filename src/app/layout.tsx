@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     url: 'https://findmytokens.com',
     siteName: 'FindMyTokens',
     type: "website",
+  },
+  alternates: {
+    canonical: 'https://findmytokens.com',
   }
 };
 
