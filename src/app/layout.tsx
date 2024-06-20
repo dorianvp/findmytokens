@@ -4,6 +4,14 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { WithContext, WebSite } from 'schema-dts'
+
+const jsonLd: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'FindMyTokens',
+  description: 'Match wallet transactions to exchange deposit addresses, aiding in fund recovery, identifying unclaimed balances, and improving recordkeeping.',
+}
 
 const khand = localFont({
   src: '../../public/fonts/khand/Khand-Variable.woff',
@@ -42,6 +50,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
         <meta name="google-site-verification" content="7q9syfElLokwsvPkNlNSukWpyXP6HdJs3Bvp7Ue_MFw" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={`${khand.variable} ${jakartaPlus.variable}`}>
         {children}
