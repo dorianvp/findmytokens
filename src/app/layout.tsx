@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* <link rel="icon" href="/favicon.ico" sizes="any" /> */}
         <meta name="google-site-verification" content="7q9syfElLokwsvPkNlNSukWpyXP6HdJs3Bvp7Ue_MFw" />
         <script
           type="application/ld+json"
