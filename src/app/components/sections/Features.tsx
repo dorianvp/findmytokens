@@ -73,31 +73,31 @@ export function Features() {
 					ref={canvasRef}
 				/>
 				<div className="flex flex-col items-center justify-start w-10/12 lg:w-3/12 mb-10">
-					<h2
+					<h3
 						className="bg-red-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center font-mono"
 						ref={firstRef}
 					>
 						1
-					</h2>
+					</h3>
 					<h3 className="my-5 text-center"><b>Choose A Wallet</b></h3>
 					<p className="text-center">Enter the EVM wallet you want to use to create a report.</p>
 				</div>
 				<div className="flex flex-col items-center justify-start w-10/12 lg:w-3/12 mb-10">
-					<h2 className="bg-green-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center font-mono">
+					<h3 className="bg-green-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center font-mono">
 						2
-					</h2>
+					</h3>
 					<h3 className="my-5 text-center"><b>Check For Matches</b></h3>
 					<p className="text-center">
 						We explore the Blockchain, analyzing your past transactions for interactions with centralized exchanges.
 					</p>
 				</div>
 				<div className="flex flex-col items-center w-10/12 lg:w-3/12">
-					<h2
+					<h3
 						className="bg-blue-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center font-mono"
 						ref={thirdRef}
 					>
 						3
-					</h2>
+					</h3>
 					<h3 className="my-5 text-center"><b>Download The Report</b></h3>
 					<p className="text-center">
 						We generate a report detailing the specific interactions between your wallet and the exchanges.
