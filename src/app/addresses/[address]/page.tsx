@@ -1,8 +1,8 @@
 'use client'
 
 import Image from "next/image";
-import heroBg from '../../../public/bg.png';
-import tickIcon from '../../../public/tick.svg';
+import heroBg from '../../../../public/bg.png';
+import tickIcon from '../../../../public/tick.svg';
 import { useCallback, useEffect, useState } from "react";
 import { getSummary } from "@/actions";
 import { WalletSummary } from "@/utils/analysis";
