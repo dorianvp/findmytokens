@@ -17,20 +17,20 @@ export function CaseStudies() {
 			<section className='flex flex-col justify-center items-center md:flex-row'>
 				<UseCase
 					name='Brad'
-					role='Found Tokens On A Forgotten Exchange Account'
-					text="I have been in crypto for a long time, and remember opening accounts on many different exchanges. However, I have forgotten which ones exactly, and by using FindMyTokens I was able to get the names of exchanges I have interacted with my main wallet, and access them to find unclaimed balances."
+					role='Clicked on a Fake Airdrop Link and Got Drained'
+					text="I've been in crypto for years, but I fell victim to a scam after clicking on a fake airdrop link. I lost all the tokens from my wallet and felt hopeless. Tried the hacker wallet on FindMyTokens and discovered multiple transactions to centralized exchanges. Armed with this proof, I reported the incident to the exchange, they froze the account and after a legal review, I recovered my drained tokens."
 					className='mb-10 md:mr-10'
 				/>
 				<UseCase
 					name='Matt'
-					role='Recovered Hacked Wallet Assets'
-					text="I was able to scan the wallet that stole my assets and after finding out that it recently made a transaction to a centralized exchange I was able to report it, and after submitting proof I ended up recovering my tokens. I couldn't be more thankful!"
+					role='Interacted with a Fake NFT and Lost Tokens'
+					text="I made a costly mistake by interacting with a fake NFT that drained my wallet. Desperate to recover my tokens, I used FindMyTokens to trace the transactions to a centralized exchange. With the detailed report from FindMyTokens, I submitted evidence and successfully reclaimed my lost tokens."
 					className='mb-10 md:mr-10'
 				/>
 				<UseCase
 					name='Sofia'
-					role='Completed My Record-Keeping'
-					text="After sending hundreds of transactions throughout the years I was struggling to make sense of them, with FindMyTokens I was able to improve my recordkeeping by generating a list of all the exchanges I have either sent or received tokens from in the past."
+					role='Accidentally Exposed Private Keys'
+					text="In a moment of oversight, I accidentally exposed my private keys, leading to unauthorized transactions and the loss of my entire wallet. FindMyTokens allowed me to see that the attacker had previously sent tokens to a couple of exchanges where he performed a KYC procedure. Together with my lawyers we were able to discover the attacker's identity and reported it to the authorities."
 				/>
 			</section>
 		</section>

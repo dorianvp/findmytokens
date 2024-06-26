@@ -28,7 +28,7 @@ export function FAQ() {
 					</AccordionTrigger>
 					<AccordionContent>
 						<h4 className="font-mono">
-							FindMyTokens is a web app that allows you to search for wallet transactions by entering your EVM public wallet address. We scan those wallet transactions and use advanced algorithms to match them with the public wallet addresses of registered cryptocurrency exchanges. Then, we generate a PDF report detailing the exchange, chain, and time the match was registered.
+							FindMyTokens is an advanced analytics tool specifically crafted to aid in the recovery of stolen cryptocurrency assets. By meticulously analyzing the transaction history of a wallet across multiple blockchain networks, FindMyTokens identifies and matches transactions with wallet addresses associated with centralized exchanges. This process enables the generation of detailed reports that provide clear insights into interactions between a hacker wallet and exchanges, empowering you with essential information to recover lost or stolen tokens effectively.
 						</h4>
 					</AccordionContent>
 				</AccordionItem>
@@ -36,28 +36,14 @@ export function FAQ() {
 					<AccordionTrigger>
 						<h3 className="text-left">
 							<b>
-								What is FindMyTokens useful for?
+								How does FindMyTokens help me recover my stolen assets?
 							</b>
 						</h3>
 					</AccordionTrigger>
 					<AccordionContent>
-						<ul className="list-disc">
-							<li>
-								<h4 className="font-mono">
-									<b>Hackers identification:</b> Identify the exchanges used by hackers and report them, by scanning the wallet that stole your funds.
-								</h4>
-							</li>
-							<li>
-								<h4 className="font-mono">
-									<b>Forgotten accounts:</b> Remember exchanges you have interacted with and where you likely have an account opened where tokens might still be in balance.
-								</h4>
-							</li>
-							<li>
-								<h4 className="font-mono">
-									<b>Recordkeeping:</b> Keep track of dates and blockchains when sending tokens to centralized exchanges.
-								</h4>
-							</li>
-						</ul>
+						<h4 className="font-mono">
+							FindMyTokens aids in recovering stolen assets by identifying transactions between the attacker's wallet and centralized exchanges. If the wallet that holds your stolen tokens ever interacted with an exchange, our tool detects these transactions. This information is crucial for reporting the incident to authorities or exchange platforms, providing evidence that can lead to the recovery of your stolen tokens.
+						</h4>
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-3">

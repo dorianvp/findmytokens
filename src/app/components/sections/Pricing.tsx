@@ -16,8 +16,6 @@ export function Pricing() {
 			</h2>
 			<section className="flex justify-between items-center my-10 w-full md:w-8/12">
 				<PriceCard title="$14.99" desc="1 Wallet Report" className="w-full" />
-				{/* <PriceCard title="$99.99" desc="4 Wallet Report" className="mr-5" />
-				<PriceCard title="$150.00" desc="7 Wallet Report" /> */}
 			</section>
 			<div className="flex flex-col px-10 py-5 bg-white items-center justify-center rounded-xl mx-5 w-full md:w-8/12">
 				<p className="text-purple">INSTITUTIONAL</p>
@@ -58,10 +56,13 @@ function PriceCard({ title, desc, className }: PriceCardProps & HTMLAttributes<H
 			<h2 className="font-mono">
 				{title}
 			</h2>
-			<p className="p-5">
+			<p className="p-5 text-center">
 				<b className="font-mono">
 					{desc}
+					<br />
+					Free preview included
 				</b>
+
 			</p>
 			<Button
 				className="text-white w-fit px-6 py-4 rounded-full flex align-middle items-center"

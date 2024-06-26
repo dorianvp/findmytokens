@@ -64,7 +64,7 @@ export function Features() {
 		<section className="flex flex-col items-center py-10 px-5 lg:px-40">
 			<h2 className="py-5 text-center">
 				<b>
-					How does FindMyTokens work?
+					How FindMyTokens Works:
 				</b>
 			</h2>
 			<div className="flex flex-col lg:flex-row justify-between items-center lg:items-start my-32 relative">
@@ -80,7 +80,9 @@ export function Features() {
 						1
 					</h3>
 					<h3 className="my-5 text-center"><b>Choose A Wallet</b></h3>
-					<p className="text-center">Enter the EVM wallet you want to use to create a report.</p>
+					<p className="text-center">
+						Enter the attacker's wallet address wallet address.
+					</p>
 				</div>
 				<div className="flex flex-col items-center justify-start w-10/12 lg:w-3/12 mb-10">
 					<h3 className="bg-green-500 text-white rounded-full w-24 h-24 text-center flex items-center justify-center font-mono">
@@ -88,7 +90,7 @@ export function Features() {
 					</h3>
 					<h3 className="my-5 text-center"><b>Check For Matches</b></h3>
 					<p className="text-center">
-						We explore the Blockchain, analyzing your past transactions for interactions with centralized exchanges.
+						Get a preview of exchange interactions across multiple chains.
 					</p>
 				</div>
 				<div className="flex flex-col items-center w-10/12 lg:w-3/12">
@@ -100,7 +102,7 @@ export function Features() {
 					</h3>
 					<h3 className="my-5 text-center"><b>Download The Report</b></h3>
 					<p className="text-center">
-						We generate a report detailing the specific interactions between your wallet and the exchanges.
+						Download a report detailing exchanges the wallet has engaged with, timestamps of transactions, and relevant wallet addresses, so you can file a report and recover your tokens.
 					</p>
 				</div>
 			</div>

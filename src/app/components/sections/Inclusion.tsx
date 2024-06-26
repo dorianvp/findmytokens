@@ -44,7 +44,7 @@ export function Inclusion() {
 							</b>
 						</h3>
 						<p className="text-center my-4">
-							Each report provides an exact timestamp for every interaction within the wallet, ensuring precise information for reporting or accounting purposes.
+							Each report provides an exact timestamp of every interaction within the wallet, ensuring precise information for filing reports.
 						</p>
 					</div>
 					<Image
