@@ -94,30 +94,12 @@ export async function parseAddress(address: string): Promise<FullReport> {
 }
 
 export async function getSummary(address: string): Promise<WalletSummary> {
-	// const etherscanData = await requestEtherscanAction('get_account_transactions', address);
-	// // const bscData = await requestBscscanAction('get_account_transactions', address)
-
-	// let pre: any[] = [];
 
 	const parsedData = await parseAddress(address);
 
-	// ethData.forEach((i: any) => {
-	// 	pre.push({ exchangeAddress: i.exchangeAddress, exchangeName: i.exchangeName })
-	// });
-
-	// let db = {}
-
-	// pre.forEach((obj: any) => {
-	// 	// @ts-ignore
-	// 	db[obj[Object.keys(obj)[0]]] = obj[Object.keys(obj)[1]]
-	// });
-
-	// const result = analyzeNormalTransActions(etherscanData.result, db);
-	// // redirect(`${formData.get('address')}`);
 	const exCount = getExchangesInteracted(parsedData);
 
 	const chains = getChains(parsedData);
-	// console.log('RESPONSE', r);
 
 	if (exCount == 0) {
 		return {
@@ -148,6 +130,6 @@ export async function resolveInput(formData: FormData) {
 				name: normalize(address),
 			})
 		}
-		redirect(`/${resolvedAddress}`)
+		redirect(`/addresses/${resolvedAddress}`)
 	}
 }
