@@ -42,7 +42,7 @@ export function FAQ() {
 					</AccordionTrigger>
 					<AccordionContent>
 						<h4 className="font-mono">
-							FindMyTokens aids in recovering stolen assets by identifying transactions between the attacker's wallet and centralized exchanges. If the wallet that holds your stolen tokens ever interacted with an exchange, our tool detects these transactions. This information is crucial for reporting the incident to authorities or exchange platforms, providing evidence that can lead to the recovery of your stolen tokens.
+							FindMyTokens aids in recovering stolen assets by identifying transactions between the attacker&apos;s wallet and centralized exchanges. If the wallet that holds your stolen tokens ever interacted with an exchange, our tool detects these transactions. This information is crucial for reporting the incident to authorities or exchange platforms, providing evidence that can lead to the recovery of your stolen tokens.
 						</h4>
 					</AccordionContent>
 				</AccordionItem>

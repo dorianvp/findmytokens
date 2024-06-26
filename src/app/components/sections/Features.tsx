@@ -81,7 +81,7 @@ export function Features() {
 					</h3>
 					<h3 className="my-5 text-center"><b>Choose A Wallet</b></h3>
 					<p className="text-center">
-						Enter the attacker's wallet address wallet address.
+						Enter the attacker&apos;s wallet address wallet address.
 					</p>
 				</div>
 				<div className="flex flex-col items-center justify-start w-10/12 lg:w-3/12 mb-10">

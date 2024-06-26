@@ -34,7 +34,7 @@ export function Hero() {
 			<div className="flex flex-col items-center justify-center md:p-12 min-h-screen h-full w-10/12 md:w-8/12">
 				<h2 className="my-5 text-white text-center text-4xl md:text-6xl"><b>Recover Hacked Tokens</b></h2>
 				<p className="my-5 text-white text-center text-base md:text-xl h-full">
-					FindMyTokens matches wallet transactions to exchange deposit addresses. Scan the attacker's wallet holding your tokens and check exchange interactions, enabling you to report the incident and recover your assets.
+					FindMyTokens matches wallet transactions to exchange deposit addresses. Scan the attacker&apos;s wallet holding your tokens and check exchange interactions, enabling you to report the incident and recover your assets.
 				</p>
 				<HeroForm />
 				<span className="w-0 lg:w-1/2" />
