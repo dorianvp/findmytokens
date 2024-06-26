@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: 'https://findmytokens.com',
 			lastModified: new Date(),
 			changeFrequency: 'yearly',
-			priority: 1,
 		}
 	]
 }
