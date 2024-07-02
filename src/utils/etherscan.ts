@@ -93,4 +93,4 @@ export async function requestArbiscanAction(type: 'get_account_transactions' | a
 	}
 }
 
-// https://api.etherscan.io/api?module=account&actions=txlist&address=0xa322BAfebb305bf55EAD5E03Fd6372c2574df6a3&startblock=0&endblock=99999999&sort=asc&apikey=7I4ZAYFAX1R7K4ZHXBMI315MY6UEQ7WZND
+// https://api.etherscan.io/api?module=account&actions=txlist&address=0xa322BAfebb305bf55EAD5E03Fd6372c2574df6a3&startblock=0&endblock=99999999&sort=asc&apikey=YourApiKeyToken
