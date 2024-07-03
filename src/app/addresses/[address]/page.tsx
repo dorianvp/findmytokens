@@ -121,6 +121,7 @@ export default function Address({ params }: { params: { address: string } }) {
 					variant={"destructive"}
 					className="text-white w-fit flex align-middle items-center rounded-full my-5"
 					onClick={() => {
+						sendGAEvent({ event: 'click_stripe', value: params.address })
 						router.push(`/checkout/${params.address}`)
 					}}
 				>
