@@ -25,7 +25,18 @@ const nextConfig = {
 				port: '',
 				pathname: '/widgets/**'
 			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.sanity.io',
+				port: '',
+				pathname: '/images/**'
+			},
 		],
+	},
+	logging: {
+		fetches: {
+			fullUrl: true,
+		},
 	}
 };
 
