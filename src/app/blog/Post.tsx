@@ -5,7 +5,7 @@ import { SanityDocument } from "next-sanity"
 import { getImageDimensions } from '@sanity/asset-utils'
 
 import { dataset, projectId } from '../../../sanity/env'
-import urlBuilder from "@sanity/image-url"
+import { client } from "../../../sanity/lib/client"
 
 const urlFor = (source: any) =>
 	imageUrlBuilder({ projectId, dataset }).image(source)
@@ -36,14 +36,11 @@ export default function Post({ post }: { post: SanityDocument }) {
 const SampleImageComponent = ({ value }) => {
 	const { width, height } = getImageDimensions(value)
 	return (
-		<img
-			src={urlBuilder().image(value).width(800).fit('max').auto('format').url()}
-			alt={value.alt || ' '}
-			loading="lazy"
-			style={{
-				// Avoid jumping around with aspect-ratio CSS property
-				aspectRatio: width / height,
-			}}
+		<Image alt=""
+			src={imageUrlBuilder({
+				clientConfig: client.config(),
+			}).image(value).width(800).fit('max').auto('format').url()}
+			width={width} height={height} loading="lazy"
 		/>
 	)
 }
