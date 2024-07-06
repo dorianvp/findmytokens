@@ -1,5 +1,10 @@
 import { NavBar } from "@/components/NavBar/navbar";
 
+export const metadata = {
+	title: "Find My Tokens | Blog index.",
+	description: "Find My Tokens | Learn about topics such as hacking, forensics, and more.",
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
