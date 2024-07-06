@@ -25,7 +25,7 @@ export function HeroForm() {
 				className="mt-5 w-full rounded-full lg:mt-0 lg:w-fit"
 				variant={"destructive"}
 				onClick={() => {
-					sendGAEvent({ event: 'click_preview', value: address })
+					sendGAEvent('event', 'click_preview', { value: address })
 				}}
 			>
 				Generate Report

@@ -2,8 +2,7 @@ import { QueryParams, SanityDocument } from "next-sanity"
 import { notFound } from "next/navigation"
 
 import { POSTS_QUERY, POST_QUERY } from "../../../../sanity/lib/queries";
-import Post from "../Post"
-
+import Post from "../../../components/blog/post"
 import { sanityFetch } from "../../../../sanity/lib/fetch"
 
 

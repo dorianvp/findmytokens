@@ -65,6 +65,7 @@ const config = {
         'dark-gray': '#161C2D',
         'gray': '#ECF2F7',
         'purple': '#473BF0',
+        'dark-purple': '#0C0228',
         'danger': '#F64B4B'
       },
       borderRadius: {

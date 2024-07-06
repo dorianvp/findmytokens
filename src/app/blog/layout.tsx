@@ -1,35 +1,14 @@
-import { sanityFetch } from "../../../sanity/lib/fetch"
+import { NavBar } from "@/components/NavBar/navbar";
 
-type HomePageProps = {
-	_id: string
-	title?: string
-	navItems: any[]
-}
-
-export default async function HomeLayout({ children }: { children: React.ReactNode }) {
-	// revalidate if there are changes to either the home document or to a page document (since they're referenced to in navItems)
-	const home = await sanityFetch<HomePageProps>({
-		query: `*[_id == "home"][0]{...,navItems[]->}`,
-		tags: ['home', 'page']
-	})
-
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
 	return (
-		<main>
-			<nav>
-				<span>{home?.title}</span>
-				<ul>
-					{home?.navItems.map(navItem => {
-						return (
-							< li key={navItem._id} >
-								<a href={navItem?.slug?.current}>
-									{navItem?.title}
-								</a>
-							</li>
-						);
-					})}
-				</ul>
-			</nav>
+		<section className="flex min-h-screen flex-col items-center justify-start bg-dark-purple p-3 md:p-5">
+			<NavBar />
 			{children}
-		</main >
-	)
+		</section>
+	);
 }

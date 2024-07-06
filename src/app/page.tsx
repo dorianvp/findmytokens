@@ -5,7 +5,6 @@ import { Features } from "./components/sections/Features";
 import { Footer } from "./components/sections/Footer";
 import { Hero } from "./components/sections/Hero";
 import { Inclusion } from "./components/sections/Inclusion";
-import { PoweredBy } from "./components/sections/PoweredBy";
 import { Pricing } from "./components/sections/Pricing";
 import { Sample } from "./components/sections/Sample";
 

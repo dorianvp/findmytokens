@@ -60,8 +60,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${khand.variable} ${jakartaPlus.variable}`}>
-        {children}
-        <SpeedInsights />
+        <main className="flex flex-col min-h-screen">
+          {children}
+          <SpeedInsights />
+        </main>
       </body>
       <GoogleAnalytics gaId="G-55D92HZQR9" />
       <Analytics />
