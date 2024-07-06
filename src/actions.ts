@@ -130,6 +130,6 @@ export async function resolveInput(formData: FormData) {
 				name: normalize(address),
 			})
 		}
-		redirect(`/addresses/${resolvedAddress}`)
+		redirect(`/summary/${resolvedAddress?.toLocaleLowerCase()}`)
 	}
 }
