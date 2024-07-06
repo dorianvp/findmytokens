@@ -19,9 +19,9 @@ export default async function Blog() {
 	}`)
 	return (
 		<section
-			className="flex flex-col items-start justify-start bg-dark-purple text-white w-full h-full"
+			className="flex flex-col items-start justify-start bg-dark-purple text-white w-full h-full p-6"
 		>
-			<h1 className="text-8xl font-bold">All Posts</h1>
+			<h1 className="text-8xl font-bold my-5">All Posts</h1>
 			<PostList posts={posts} />
 		</section>
 	)
