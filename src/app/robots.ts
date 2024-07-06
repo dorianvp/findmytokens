@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
 		rules: {
 			userAgent: '*',
 			allow: '/',
-			disallow: '/addresses/',
+			disallow: '/return',
 		},
 		sitemap: 'https://findmytokens.com/sitemap.xml',
 	}
