@@ -1,5 +1,3 @@
-// ./sanity/lib/fetch.ts
-
 import type { ClientPerspective, QueryParams } from "next-sanity";
 import { draftMode } from "next/headers";
 
@@ -22,7 +20,7 @@ export async function sanityFetch<QueryResponse>({
 	 * When outside of the Sanity Studio we also support the Vercel Toolbar Visual Editing feature, which is only enabled in production when it's a Vercel Preview Deployment.
 	 */
 	stega = perspective === "previewDrafts" ||
-	process.env.VERCEL_ENV === "preview",
+	process.env.VERCEL_ENV === "development",
 }: {
 	query: string;
 	params?: QueryParams;
