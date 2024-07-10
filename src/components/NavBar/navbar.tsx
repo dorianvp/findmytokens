@@ -32,7 +32,7 @@ export function NavBar() {
 								</Link>
 							</NavigationMenuLink>
 						</NavigationMenuList>
-						<NavigationMenuList>
+						{/* <NavigationMenuList>
 							<NavigationMenuLink asChild>
 								<Link
 									href="/about"
@@ -42,7 +42,7 @@ export function NavBar() {
 									About
 								</Link>
 							</NavigationMenuLink>
-						</NavigationMenuList>
+						</NavigationMenuList> */}
 					</NavigationMenu>
 				</div>
 			</div>
