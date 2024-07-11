@@ -9,8 +9,6 @@
 
 import { NextStudio } from 'next-sanity/studio'
 import config from '../../../../sanity.config'
-console.log(config, process.env.NODE_ENV);
-
 
 export const dynamic = 'force-static'
 

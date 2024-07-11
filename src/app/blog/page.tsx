@@ -16,7 +16,11 @@ export default async function Blog() {
 		title,
 		slug,
 		"mainImage": mainImage.asset->url
-	}`)
+	}`, {}, {
+		next: {
+			revalidate: 600
+		}
+	})
 	return (
 		<section
 			className="flex flex-col items-start justify-start bg-dark-purple text-white w-full h-full p-6"
