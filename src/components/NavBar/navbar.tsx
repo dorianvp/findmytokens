@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react"
 import Link from "next/link"
 
@@ -6,6 +8,7 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import { sendGAEvent } from "@next/third-parties/google"
 
 export function NavBar() {
 	return (
@@ -27,22 +30,12 @@ export function NavBar() {
 									href="/blog"
 									className="px-4 py-2 text-sm font-medium"
 									prefetch={false}
+									onClick={() => sendGAEvent('event', 'click_blog', { value: 'Blog' })}
 								>
 									Blog
 								</Link>
 							</NavigationMenuLink>
 						</NavigationMenuList>
-						{/* <NavigationMenuList>
-							<NavigationMenuLink asChild>
-								<Link
-									href="/about"
-									className="px-4 py-2 text-sm font-medium"
-									prefetch={false}
-								>
-									About
-								</Link>
-							</NavigationMenuLink>
-						</NavigationMenuList> */}
 					</NavigationMenu>
 				</div>
 			</div>
